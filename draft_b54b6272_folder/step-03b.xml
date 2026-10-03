@@ -1,7 +1,0 @@
-<li>任务标识：task_id 对应商品与需求；job_id 对应单次执行；asset_id 与 version 对应具体成品。</li>
-<li>调用关系：trace_id 关联完整执行链路；span_id 标记单个处理步骤；parent_span_id 记录步骤依赖。</li>
-<li>版本字段：input_revision、model_version、prompt_version、layout_version、workflow_version、eval_version。</li>
-<li>公共字段：event_id、occurred_at、received_at、environment、is_simulated、匿名会话标识及脱敏用户标识。</li>
-<li>去重机制：事件重传按 event_id 去重；生成请求按幂等键处理；重试新增 job_id，保留 parent_job_id，沿用 task_id。</li>
-<li>完整性要求：模型返回、成品保存、结果展示和导出请求独立记录；失败、回退、晚到结果及版本切换保留事件历史。</li>
-<li>安全要求：日志保存受控存储引用及脱敏响应，不记录密钥或图片 base64。</li>

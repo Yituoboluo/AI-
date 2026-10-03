@@ -1,9 +1,0 @@
-<p>项目类型：独立产品项目｜文档版本：V1.0｜日期：2026-09-30</p>
-<p>项目阶段：产品原型与评测准备。已完成指标定义、事件设计、素材清点及评测用例编制；新增埋点开发、基线评测、优化实施和回归验证待执行。</p>
-<h1 seq="auto">项目概述</h1>
-<p>造物营是面向电商设计师和商家运营的 PC 端 AI 图片创作工作台，围绕商品上传、自动抠图、创意规划、图片生成、合成编辑和导出构建设计生产流程。用户可自定义背景、文案与排版；未设置的选项由系统生成策略。</p>
-<p>核心场景为同一商品的多方向视觉探索。传统流程需要反复确认风格、寻找背景、合成商品和调整版式；当前产品的主要质量问题集中在背景内容不足、文字样式固定及组内视觉差异不足。</p>
-<p>产品目标：缩短商品素材转化为可采用视觉样稿的时间，在保留商品事实和满足设计需求的前提下，提供多个具有明确差异的设计方向。后续扩展至不同商品、规格与数量组合的批量套图。</p>
-<table><colgroup><col width="150"/><col width="400"/><col width="470"/></colgroup><thead><tr><th background-color="light-gray"><p>建设范围</p></th><th background-color="light-gray"><p>现状</p></th><th background-color="light-gray"><p>验收标准</p></th></tr></thead><tbody><tr><td vertical-align="top"><p>创作链路</p></td><td vertical-align="top"><p>已具备上传、抠图、生成、合成、保存与导出流程</p></td><td vertical-align="top"><p>输入、任务、结果及失败记录可关联；成品可读取与导出</p></td></tr><tr><td vertical-align="top"><p>指标与埋点</p></td><td vertical-align="top"><p>已有任务状态、部分反馈及导出记录；事件补充方案已完成</p></td><td vertical-align="top"><p>指标口径一致，关键事件具备触发条件、标识、版本及时间字段</p></td></tr><tr><td vertical-align="top"><p>质量评测</p></td><td vertical-align="top"><p>70 张素材已清点；已选取 16 张输入，编制 20 条用例</p></td><td vertical-align="top"><p>完成首轮基线及同条件回归，保留逐图评分与原始证据</p></td></tr><tr><td vertical-align="top"><p>Badcase 管理</p></td><td vertical-align="top"><p>已有用户反馈、静态代码检查和保存失败 MOCK 演练框架</p></td><td vertical-align="top"><p>问题记录覆盖现象、影响、证据、假设、改进及回归状态</p></td></tr></tbody></table>
-<p>职责范围：产品需求梳理、指标与事件定义、评测集设计、质量评审、问题归因及迭代验证。当前采用指标覆盖设计生产环节，广告投放效果和销售转化不纳入本轮验收。</p>
-<h1 seq="auto">指标体系</h1>

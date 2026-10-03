@@ -1,31 +1,14 @@
-# Local dependencies, caches, and build output
 node_modules/
-.next/
 dist/
-.local/
-.work/
-.cache/
-.wrangler/
-.sites-runtime/
-.impeccable/
-__pycache__/
-*.pyc
-
-# Keep templates, never commit actual credentials
 .env
 .env.*
 !.env.example
-!.env.sample
-!.env.template
 .dev.vars
 .dev.vars.*
-.npmrc
-.pypirc
-*.key
-*.p12
-*.pfx
-
-# Runtime databases, process files, and logs
+.local/
+.sites-runtime/
+.next/
+.wrangler/
 *.db
 *.db-*
 *.sqlite
@@ -34,11 +17,7 @@ __pycache__/
 *.sqlite3-*
 *.log
 *.pid
-*.tmp
-
-# Project ZIPs are distributed through GitHub Releases
-/output/打包/
 *.zip
-*.zip.sha256
-Thumbs.db
-.DS_Store
+*.tar
+
+.impeccable/
