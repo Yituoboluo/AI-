@@ -6,7 +6,7 @@ const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;
 let hooks,service=null,jobs=[],message='正在连接工作区…',taskBusy=false,poll=null,activeProject=null,metrics=null,metricsRequest=null;
 export async function api(path,body){
   if(body&&/\/compose$/.test(path))body=await transformCompositionImages(body);
-  const response=await fetch('/api'+path,{method:body===undefined?'GET':'POST',credentials:'same-origin',headers:{...accountHeaders(),...(body===undefined?{}:{'Content-Type':'application/json'})},body:body===undefined?undefined:JSON.stringify(body),cache:'no-store',signal:AbortSignal.timeout(/\/(run|recover|compose)$/.test(path)?240000:10000)});
+  const response=await fetch('/api'+path,{method:body===undefined?'GET':'POST',credentials:'same-origin',headers:{...accountHeaders(),...(body===undefined?{}:{'Content-Type':'application/json'})},body:body===undefined?undefined:JSON.stringify(body),cache:'no-store',signal:AbortSignal.timeout(/\/(run|recover|compose)$/.test(path)?(accountContext().mode==='independent'?290000:240000):10000)});
   let value;try{value=await response.json();}catch{throw new Error('云端服务尚未部署或暂时不可用。');}
   if(!response.ok){const e=new Error(value.error?.message||'请求未完成，请重试。');e.code=value.error?.code;e.status=response.status;handleAccountError(e);throw e;}assertAccountActive();return value;
 }

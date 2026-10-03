@@ -94,11 +94,14 @@ node --env-file=.env.local scripts/reset-password.mjs account@example.com
 | QWEN_WORKSPACE_ID | 可选，业务空间专属域名；留空用对应地域现有域名 |
 | QWEN_TEXT_MODEL | 默认 qwen-plus |
 | QWEN_VISION_MODEL | 新版品类创作默认 qwen3-vl-plus；旧版兼容路径默认 qwen-vl-plus，可统一覆盖 |
+| QWEN_VISION_TIMEOUT_MS | 仅视觉规划的等待期限，默认 60000 毫秒；只接受 60000–90000 的安全整数，非法或超界值回到默认值。本 Vercel 部署设为 90000 |
 | QWEN_IMAGE_MODEL | 默认 qwen-image-plus-2026-01-09，同步文生图 |
 | COPY_PROVIDER / IMAGE_PROVIDER | qwen；旧 DeepSeek/Seedream 适配保留供迁移 |
 | AI_ENABLED | 默认 false；明确开启才会发起调用 |
 | AI_COPY_DAILY_LIMIT | 文案每日调用尝试次数，默认 0 |
 | AI_IMAGE_DAILY_LIMIT | 默认 0 关闭；设为 unlimited 不限每日次数。一套或三套独立样稿分别预留 1 或 3 次，实际费用以服务商调用为准 |
+
+视觉规划的两条路径共用 `QWEN_VISION_TIMEOUT_MS`，默认等待 60 秒；本 Vercel 部署等待 90 秒，为后续最多 180 秒的生图请求及保存留出余量，函数总上限仍为 300 秒。原 Sites 未设置该变量时保留 60 秒。此参数不改变文案或生图的等待期限，也不自动重试：超时仍记录为结果未确认，供应商可能已执行并计费。
 
 快捷创作每次包含一次视觉规划，再按所选的一个或三个独立方向分别生成图片，预留 1 或 3 次应用图片额度；视觉 tokens 单独记录，视觉规划与图片生成均可能产生供应商费用。每套样稿使用对应方向的生成图，修改文案复用已有底图。次数按账户、UTC 日期分别计算，单账户同时最多两个待执行/执行中任务。失败和结果未确认的尝试也占额度，不能把次数上限视为人民币硬预算；还需在供应商侧设置额度/余额控制。密钥及模型权限必须通过真实调用验证，代码接入不等于已经实测成功。
 
