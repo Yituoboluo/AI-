@@ -1,0 +1,13 @@
+.account-card .account-email,.account-email{font-weight:600;overflow-wrap:anywhere}
+.account-tabs{display:flex;gap:6px;padding:4px;margin-bottom:22px;border:1px solid var(--line,#e8e8e8);border-radius:9px;background:#f7f7f7}
+.account-tabs button{flex:1;border:0;border-radius:6px;padding:10px;background:transparent;color:#666;font:inherit;cursor:pointer}
+.account-tabs button[aria-pressed="true"]{background:white;color:#181818;box-shadow:0 1px 4px #00000012}
+#account-dialog{width:min(440px,calc(100vw - 32px));padding:0}
+#account-dialog .dialog-header p{margin:8px 0 0}
+#account-dialog .field{margin-bottom:18px}
+.account-feedback{min-height:20px;margin:8px 0;color:#b3401b;font-size:13px;line-height:1.6}
+.account-notice{position:fixed;z-index:90;left:50%;bottom:24px;transform:translateX(-50%);display:flex;align-items:center;gap:14px;padding:16px 20px;width:max-content;max-width:calc(100vw - 32px);border:1px solid #eadbcd;border-radius:12px;background:#fffaf4;box-shadow:0 8px 32px #00000016;font-size:14px}
+.account-notice[hidden]{display:none}
+.account-notice span{max-width:420px;line-height:1.5}
+#account-button{white-space:nowrap}
+@media(max-width:640px){.account-notice{flex-wrap:wrap;bottom:14px}.account-notice span{width:100%}#account-button{font-size:12px;padding:8px 10px}}

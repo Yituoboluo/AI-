@@ -1,29 +1,32 @@
 import {api} from './cloud.js';
+import {accountContext,assertAccountActive} from './auth.js';
 
 let databasePromise,identityPromise,identity=null,flushing=false,retryTimer=null,observer;
 const deliveredViews=new Set(),failedViews=new Set();
 const database=()=>databasePromise||(databasePromise=new Promise((resolve,reject)=>{
- const request=indexedDB.open('zaowu-telemetry-outbox',1);
+ const account=accountContext(),name=account.mode==='independent'?'zaowu-telemetry-outbox:'+(account.user?.id||'anonymous'):'zaowu-telemetry-outbox';
+ const request=indexedDB.open(name,1);
  request.onupgradeneeded=()=>request.result.createObjectStore('pending',{keyPath:'key'});
  request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);
 }));
 async function storage(action,value){const db=await database();return new Promise((resolve,reject)=>{const tx=db.transaction('pending',action==='getAll'?'readonly':'readwrite'),store=tx.objectStore('pending'),r=action==='getAll'?store.getAll():store[action](value);let result;r.onsuccess=()=>{result=r.result;};tx.oncomplete=()=>resolve(result);tx.onerror=()=>reject(tx.error);});}
-async function owner(){if(identity)return identity;if(!identityPromise)identityPromise=api('/quality/identity').then(x=>identity=x.identity).finally(()=>{identityPromise=null;});return identityPromise;}
+async function owner(){assertAccountActive();const account=accountContext();if(account.mode==='independent'&&!account.user)throw new Error('登录后记录云端使用情况');if(identity)return identity;if(!identityPromise)identityPromise=api('/quality/identity').then(x=>identity=x.identity).finally(()=>{identityPromise=null;});return identityPromise;}
 export async function queueTelemetry(event){
  try{const account=await owner(),body={id:crypto.randomUUID(),occurredAt:new Date().toISOString(),...event};
   await storage('put',{key:account+':'+body.id,owner:account,body});void flushTelemetry();
  }catch{document.dispatchEvent(new CustomEvent('telemetry-status',{detail:{pending:true}}));}
 }
 export async function flushTelemetry(){
- if(flushing)return;flushing=true;let pending=false;
+ const session=accountContext();if(flushing||session.frozen||session.mode==='independent'&&!session.user)return;flushing=true;let pending=false;
  try{const account=await owner(),events=(await storage('getAll')).filter(x=>x.owner===account);
   for(const item of events){try{await api('/telemetry',item.body);await storage('delete',item.key);}catch(e){
-   if([400,404,409].includes(e.status)){await storage('delete',item.key);continue;}
+   if([400,404,409].includes(e.status)&&e.code!=='WORKSPACE_CHANGED'){await storage('delete',item.key);continue;}
    pending=true;break;
   }}
- }catch{pending=true;}finally{flushing=false;try{pending=pending||(await storage('getAll')).some(x=>x.owner===identity);}catch{pending=true;}clearTimeout(retryTimer);if(pending)retryTimer=setTimeout(flushTelemetry,15000);document.dispatchEvent(new CustomEvent('telemetry-status',{detail:{pending}}));}
+ }catch{pending=true;}finally{flushing=false;try{pending=pending||(await storage('getAll')).some(x=>x.owner===identity);}catch{pending=true;}clearTimeout(retryTimer);if(pending&&!accountContext().frozen)retryTimer=setTimeout(flushTelemetry,15000);document.dispatchEvent(new CustomEvent('telemetry-status',{detail:{pending}}));}
 }
 window.addEventListener('online',flushTelemetry);
+document.addEventListener('account-frozen',()=>{clearTimeout(retryTimer);identity=null;observer?.disconnect();});
 
 export function observeResultTelemetry(root,jobs){
  observer?.disconnect();

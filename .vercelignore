@@ -1,0 +1,10 @@
+.git/
+.env*
+.agents/
+.superpowers/
+skills-lock.json
+node_modules/
+dist/
+dist-vercel/
+.local/
+tests/

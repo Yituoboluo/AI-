@@ -3,6 +3,7 @@ import {quickDefaults,quickMarkup} from './quick-layout.js';
 import {prepareProduct,composeCreative} from './quick-images.js';
 import {queueTelemetry,observeResultTelemetry,flushTelemetry} from './telemetry.js';
 import {categoryNames} from './visual-layout.js';
+import {cloudAccountReady,accountContext} from './auth.js';
 
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=id=>document.getElementById(id);
@@ -16,6 +17,7 @@ function say(text,error=false){$('quick-status').textContent=text;$('quick-statu
 function cutoutStatus(text,error=false){$('quick-cutout-status').textContent=text;$('quick-cutout-status').classList.toggle('error',error);}
 function newDraft(file,original,settings,projectId=crypto.randomUUID()){const stamp=new Date().toISOString();return {id:projectId,name:'商品快捷创作',createdAt:stamp,updatedAt:stamp,thumbnail:original,draft:{productName:'',sellingPoint:'',campaign:'商品快捷创作',headline:'',price:'',originalPrice:'',startDate:'',endDate:'',imageName:file.name.slice(0,200),background:'white',template:'airy',size:settings.ratio,revision:1,approvedRevision:null,generated:false,isExample:false,history:[],imageData:original,backgroundData:null,creationMode:'quick',quick:{originalImageData:original,segmentation:'original',settings}}};}
 async function localSave(synced=false){if(!project)return;const latest=hooks.list().find(p=>p.id===project.id);project.serverVersion=Math.max(project.serverVersion||0,latest?.serverVersion||0);project.cloud=Boolean(project.cloud||latest?.cloud);project.pendingCloud=Boolean(project.cloud&&!synced);project.updatedAt=new Date().toISOString();await hooks.put(structuredClone(project));}
+export async function flushLocalSave(){clearTimeout(saveTimer);saveTimer=null;await localSave();}
 function activeQuickJobs(){const ids=new Set(hooks.list().map(p=>p.id));return jobs.filter(j=>j.flow==='quick'&&ids.has(j.projectId));}
 const hasRunning=()=>activeQuickJobs().some(j=>j.status==='running');
 function renderPhoto(){
@@ -114,10 +116,12 @@ function renderResults(){const list=activeQuickJobs(),focused=document.activeEle
 function update(job){jobs=[job,...jobs.filter(j=>j.id!==job.id)].sort((a,b)=>b.createdAt.localeCompare(a.createdAt));publishJob(job);renderResults();}
 function schedulePoll(){
  clearTimeout(poll);poll=null;
+ if(!cloudAccountReady())return;
  const unfinished=activeQuickJobs().some(j=>needsCompose(j)&&!resumeAttempts.has(j.id)&&(j.projectId===project?.id||observedJobs.has(j.id)));
  if(runPending||hasRunning()||unfinished)poll=setTimeout(()=>{poll=null;void refresh();},3500);
 }
 async function refresh(){
+ if(!cloudAccountReady()){clearTimeout(poll);poll=null;service=null;renderControls();if(!accountContext().frozen){jobs=[];renderResults();say('本机图片可继续编辑；登录后可使用 AI 生成与云端保存。');}return;}
  if(refreshing)return refreshing;
  refreshing=(async()=>{
   try{
@@ -182,6 +186,7 @@ async function saveFeedback(job,feedback){
  finally{feedbackSaving.delete(job.id);renderResults();}
 }
 export function initQuickCreate(adapter){hooks=adapter;$('view-image-create').innerHTML=quickMarkup(hooks.icon);
+ document.addEventListener('account-frozen',()=>{clearTimeout(poll);poll=null;service=null;renderControls();});
  $('quick-upload').addEventListener('click',()=>$('quick-file').click());$('quick-file').addEventListener('change',e=>{void upload(e.target.files?.[0]);e.target.value='';});
  const drop=$('quick-upload');drop.addEventListener('dragover',e=>{e.preventDefault();drop.classList.add('dragover');});drop.addEventListener('dragleave',()=>drop.classList.remove('dragover'));drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('dragover');void upload(e.dataTransfer.files?.[0]);});
  $('quick-generate').addEventListener('click',generate);$('quick-evaluation').addEventListener('change',()=>{$('quick-eval-fields').hidden=!$('quick-evaluation').checked;});void flushTelemetry();$('quick-refresh').addEventListener('click',refresh);

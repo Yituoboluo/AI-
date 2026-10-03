@@ -1,15 +1,19 @@
 import {studio} from './app.js';
+import {accountHeaders,accountContext,assertAccountActive,handleAccountError} from './auth.js';
+import {transformProjectImages,transformCompositionImages} from './uploads.js';
 
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let hooks,service=null,jobs=[],message='正在连接工作区…',taskBusy=false,poll=null,activeProject=null,metrics=null,metricsRequest=null;
 export async function api(path,body){
-  const response=await fetch('/api'+path,{method:body===undefined?'GET':'POST',headers:body===undefined?{}:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body),cache:'no-store',signal:AbortSignal.timeout(/\/(run|recover|compose)$/.test(path)?240000:10000)});
+  if(body&&/\/compose$/.test(path))body=await transformCompositionImages(body);
+  const response=await fetch('/api'+path,{method:body===undefined?'GET':'POST',credentials:'same-origin',headers:{...accountHeaders(),...(body===undefined?{}:{'Content-Type':'application/json'})},body:body===undefined?undefined:JSON.stringify(body),cache:'no-store',signal:AbortSignal.timeout(/\/(run|recover|compose)$/.test(path)?240000:10000)});
   let value;try{value=await response.json();}catch{throw new Error('云端服务尚未部署或暂时不可用。');}
-  if(!response.ok){const e=new Error(value.error?.message||'请求未完成，请重试。');e.code=value.error?.code;e.status=response.status;throw e;}return value;
+  if(!response.ok){const e=new Error(value.error?.message||'请求未完成，请重试。');e.code=value.error?.code;e.status=response.status;handleAccountError(e);throw e;}assertAccountActive();return value;
 }
 export async function saveCloud(project){
-  const response=await fetch('/api/projects/'+encodeURIComponent(project.id),{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({project,expectedVersion:project.serverVersion||0}),signal:AbortSignal.timeout(15000)});
-  const value=await response.json();if(!response.ok){const e=new Error(value.error?.message||'云端保存失败');e.code=value.error?.code;throw e;}return value.project;
+  const networkProject=await transformProjectImages(project);
+  const response=await fetch('/api/projects/'+encodeURIComponent(project.id),{method:'PUT',credentials:'same-origin',headers:{'Content-Type':'application/json',...accountHeaders()},body:JSON.stringify({project:networkProject,expectedVersion:project.serverVersion||0}),signal:AbortSignal.timeout(15000)});
+  const value=await response.json();if(!response.ok){const e=new Error(value.error?.message||'云端保存失败');e.code=value.error?.code;e.status=response.status;handleAccountError(e);throw e;}assertAccountActive();return value.project;
 }
 export const taskSnapshot=()=>jobs.map(j=>({...j}));
 export const cloudReady=()=>Boolean(service?.cloud);
@@ -23,12 +27,13 @@ export function renderAI(){if(!hooks)return;const p=hooks.current();if(p?.id!==a
 export function updateJob(job){jobs=[job,...jobs.filter(j=>j.id!==job.id)].sort((a,b)=>b.createdAt.localeCompare(a.createdAt));renderAI();document.dispatchEvent(new Event('cloud-jobs-updated'));}
 export function publishTaskState(nextJobs,status){jobs=nextJobs;if(status)service=status;renderAI();document.dispatchEvent(new Event('cloud-jobs-updated'));}
 export async function refreshMetrics(){if(metricsRequest)return metricsRequest;metricsRequest=(async()=>{try{metrics=await api('/metrics');}catch{metrics=null;}document.dispatchEvent(new Event('cloud-metrics-updated'));})();try{await metricsRequest;}finally{metricsRequest=null;}}
-async function refresh(){try{const [status,history]=await Promise.all([api('/status'),api('/jobs')]);publishTaskState(history.jobs,status);await refreshMetrics();message='云端工作区已连接。模型仅在你点击生成后调用。';}catch(e){service=null;message=e.message;}renderAI();hooks.render();}
+async function refresh(){const account=accountContext();if(account.mode==='independent'&&!account.user){service=null;message='登录后可使用 AI 与云端保存，本机草稿仍可编辑。';renderAI();hooks.render();return;}try{const [status,history]=await Promise.all([api('/status'),api('/jobs')]);publishTaskState(history.jobs,status);await refreshMetrics();message='云端工作区已连接。模型仅在你点击生成后调用。';}catch(e){service=null;message=e.message;}renderAI();hooks.render();}
 async function syncCurrent(){await hooks.save();const p=hooks.current();if(!p)throw new Error('请先创建一份商品创作。');await hooks.sync(p.id);message='当前创作已保存到云端。';renderAI();hooks.render();return hooks.current();}
 async function run(job,action='run'){taskBusy=true;message=action==='recover'?'正在重新保存原图片，不会再次调用模型。':'任务正在执行，可继续编辑；采纳前会核对版本。';renderAI();clearInterval(poll);poll=setInterval(async()=>{try{updateJob((await api('/jobs/'+job.id)).job);}catch{}},4000);try{const result=await api('/jobs/'+job.id+'/'+action,{});updateJob(result.job);message=result.job.status==='succeeded'?'生成完成。检查结果，采纳后再审核导出。':result.job.error?.message||'任务状态已更新。';}catch(e){message=e.message+' 请刷新任务状态后再决定是否新建调用。';}finally{clearInterval(poll);taskBusy=false;try{service=await api('/status');}catch{}renderAI();}}
 async function generate(kind){if(taskBusy)return;taskBusy=true;renderAI();try{const project=await syncCurrent();const prompt=document.getElementById('ai-brief').value.trim();const {job}=await api('/jobs',{id:crypto.randomUUID(),projectId:project.id,kind,sourceVersion:project.serverVersion,prompt});updateJob(job);await run(job);}catch(e){message=e.message;studio.toast(e.message);}finally{taskBusy=false;renderAI();}}
 async function adopt(job){const p=hooks.current();if(!p||p.id!==job.projectId||studio.info().revision!==job.sourceRevision)throw new Error('商品资料已变化，请基于当前资料重新生成。');if(job.kind==='copy')studio.applyAICopy(job.result.candidates,job.id,job.sourceRevision);else await studio.applyAIBackground(job.result.imageUrl,job.id,job.sourceRevision);await hooks.save();try{await api('/jobs/'+job.id+'/feedback',{feedback:'adopted',reason:'检查后采纳至素材，等待人工审核'});job.feedback='adopted';}catch{message='素材已采纳，反馈尚未同步；可刷新检查。';}await eventLog('adoption',studio.info().revision,job.kind);renderAI();studio.toast('已采纳。原审核失效，请重新检查两种尺寸。');}
 export async function initCloud(adapter){hooks=adapter;await refresh();if(service){try{await hooks.merge((await api('/projects')).projects);void hooks.resume().catch(e=>studio.toast(e.message));}catch(e){message=e.message;}}renderAI();
+  document.addEventListener('account-frozen',()=>{clearInterval(poll);service=null;jobs=[];metrics=null;message='账号状态已变化，请重新登录或刷新。';renderAI();});
   document.addEventListener('click',async event=>{const b=event.target.closest('button');if(!b)return;try{
     if(b.dataset.cloud==='sync')await syncCurrent();if(b.dataset.cloud==='refresh')await refresh();if(b.dataset.cloud==='reload'){await hooks.reload((await api('/projects')).projects);message='已保留本机内容，并载入云端版本。';renderAI();hooks.render();}
     if(b.dataset.recoverJob&&!taskBusy)await run(jobs.find(j=>j.id===b.dataset.recoverJob),'recover');if(b.dataset.aiKind)await generate(b.dataset.aiKind);if(b.dataset.runJob)await run(jobs.find(j=>j.id===b.dataset.runJob));if(b.dataset.adoptJob)await adopt(jobs.find(j=>j.id===b.dataset.adoptJob));

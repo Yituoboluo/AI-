@@ -21,3 +21,10 @@ dist/
 *.tar
 
 .impeccable/
+
+.vercel/
+.agents/
+.superpowers/
+dist-vercel/
+skills-lock.json
+!.env.example

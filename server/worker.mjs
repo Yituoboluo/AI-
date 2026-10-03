@@ -269,6 +269,26 @@ async function composeJob(request,env,owner,id){
  const trace=executionTrace(env,owner,row,crypto.randomUUID());await trace.start('save');
  try{return await composeJobBody(request,env,owner,id,trace);}catch(error){await trace.end(error.status>=400&&error.status<500?'cancelled':'failed',{errorCode:error.code||'COMPOSITION_SAVE_FAILED'});throw error;}
 }
+async function compositionImageKey(env,owner,value){
+ if(typeof value!=='string')fail(400,'INVALID_COMPOSITION','成品必须是 PNG 图片。');
+ if(value.startsWith('data:image/png;base64,'))return putImage(env,owner,value);
+ const match=value.match(/^\/api\/assets\/([a-f0-9]{64})\/assets\/([a-f0-9]{64})\.png$/);
+ if(!match||match[1]!==await userPrefix(owner))fail(400,'INVALID_COMPOSITION','成品图片引用不属于当前工作区。');
+ const key=value.slice(12),object=await env.BUCKET.get(key);
+ if(!object)fail(400,'IMAGE_MISSING','引用的成品图片已不可用，请重新上传。');
+ const reader=new Response(object.body).body.getReader(),chunks=[];let size=0;
+ try{
+  if(object.httpMetadata?.contentType!=='image/png'){await reader.cancel();fail(400,'INVALID_COMPOSITION','成品必须是 PNG 图片。');}
+  while(true){const {done,value:chunk}=await reader.read();if(done)break;size+=chunk.byteLength;if(size>12*1024*1024){await reader.cancel();fail(413,'IMAGE_TOO_LARGE','图片大小超过保存上限。');}chunks.push(chunk);}
+ }finally{reader.releaseLock();}
+ const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.byteLength;}
+ const valid=size>=33&&[137,80,78,71,13,10,26,10].every((byte,index)=>bytes[index]===byte)&&bytes[8]===0&&bytes[9]===0&&bytes[10]===0&&bytes[11]===13&&[73,72,68,82].every((byte,index)=>bytes[12+index]===byte);
+ if(!valid)fail(400,'INVALID_COMPOSITION','成品内容不是有效 PNG 图片。');
+ const dimensions=new DataView(bytes.buffer);if(!dimensions.getUint32(16)||!dimensions.getUint32(20))fail(400,'INVALID_COMPOSITION','成品 PNG 尺寸无效。');
+ const digest=await crypto.subtle.digest('SHA-256',bytes),hash=[...new Uint8Array(digest)].map(byte=>byte.toString(16).padStart(2,'0')).join('');
+ if(hash!==match[2])fail(400,'INVALID_COMPOSITION','成品图片校验失败，请重新上传。');
+ return key;
+}
 async function composeJobBody(request,env,owner,id,trace){
  const job=await first(stmt(env,'SELECT * FROM generation_jobs WHERE id=? AND owner_id=?',id,owner));
  if(!job||!['succeeded','failed','interrupted'].includes(job.status))fail(404,'NOT_FOUND','未找到可合成的创作结果。');
@@ -279,11 +299,11 @@ async function composeJobBody(request,env,owner,id,trace){
  if(!expectedCount||!Array.isArray(input.images)||input.images.length!==expectedCount)fail(400,'INVALID_COMPOSITION','请保存本组已完成的全部样稿。');
  const images=[];
  for(const item of input.images){
-  if(typeof item?.data!=='string'||!item.data.startsWith('data:image/png;base64,'))fail(400,'INVALID_COMPOSITION','成品必须是 PNG 图片。');
+  if(typeof item?.data!=='string')fail(400,'INVALID_COMPOSITION','成品必须是 PNG 图片。');
   if(typeof item.title!=='string'||Array.from(item.title).length>18||typeof item.subtitle!=='string'||Array.from(item.subtitle).length>40||!(visual?['left','center','right']:['center','right']).includes(item.layout))fail(400,'INVALID_COMPOSITION','成品文字或排版格式不正确。');
   const concept=visual?result.quick.concepts.find(c=>c.id===result.backgrounds[images.length]?.conceptId):null;
   if(visual&&(!concept||item.conceptId!==concept.id||item.layout!==concept.layout))fail(400,'INVALID_COMPOSITION','样稿方向与背景不匹配。');
-  images.push({imageUrl:assetUrl(await putImage(env,owner,item.data)),title:item.title,subtitle:item.subtitle,layout:item.layout,...(concept?{conceptId:concept.id,name:concept.name}: {})});
+  images.push({imageUrl:assetUrl(await compositionImageKey(env,owner,item.data)),title:item.title,subtitle:item.subtitle,layout:item.layout,...(concept?{conceptId:concept.id,name:concept.name}: {})});
  }
  if(JSON.stringify(images)===JSON.stringify(result.compositions)){await trace.end('succeeded',{unchanged:true});try{await persistQualityAssets(env,owner,job);}catch{console.warn('quality_snapshot_failed');}return json({job:jobView(job)});}
  if(input.expectedVersion!==(result.compositionVersion||0))fail(409,'VERSION_CONFLICT','成品已有新的修改，请刷新记录。');
