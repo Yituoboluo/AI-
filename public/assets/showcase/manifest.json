@@ -1,0 +1,50 @@
+{
+  "createdAt": "2026-10-03",
+  "assets": [
+    {
+      "id": "coffee",
+      "source": "coffee-editorial.png",
+      "sourceSha256": "19bac11e47f59f523027e82c41cff3f2269d5af35cda2e49d8c78f880f42dca3",
+      "sourceBytes": 2125682,
+      "web": "coffee-editorial.webp",
+      "webSha256": "3a21fbe38bc863c9824351a192932695713bf775c73c4eca5f60a0485ae63f66",
+      "webBytes": 1508952,
+      "width": 1254,
+      "height": 1254,
+      "method": "sharp lossless WebP; no resize, crop, retouch or text changes",
+      "decodedRgbaSha256": "52f7fa99e521788bfe79468a17a78a174d81b13d4479aa2090da4c60090e5d77",
+      "pixelIdentical": true,
+      "provenance": "2026-10-03 内置 imagegen 生成的 AI 视觉样例；非造物营平台实测输出或客户案例"
+    },
+    {
+      "id": "scent",
+      "source": "scent-editorial.png",
+      "sourceSha256": "06eb04e0d1deaf4afb6a11814a1e7769d555203e65d63402ad11d7097f6917a9",
+      "sourceBytes": 2137166,
+      "web": "scent-editorial.webp",
+      "webSha256": "78e32c15f1770445b199e8faff3b3fcd1439e08561a6afec154a003d30a98a3f",
+      "webBytes": 1499230,
+      "width": 1254,
+      "height": 1254,
+      "method": "sharp lossless WebP; no resize, crop, retouch or text changes",
+      "decodedRgbaSha256": "782f19b263d05932cf337d443dc150d986bd64118674f0137d5673b655a16c9a",
+      "pixelIdentical": true,
+      "provenance": "2026-10-03 内置 imagegen 生成的 AI 视觉样例；非造物营平台实测输出或客户案例"
+    },
+    {
+      "id": "audio",
+      "source": "audio-editorial.png",
+      "sourceSha256": "56ae5b65cde0aac4daacea326dbb641d90bd74e49eccf4f3911d1990eacbe93e",
+      "sourceBytes": 1875216,
+      "web": "audio-editorial.webp",
+      "webSha256": "112139d34b223f181087c22f1f36f7e43db653f9bb339a5361ce2b7c42813c71",
+      "webBytes": 1297114,
+      "width": 1254,
+      "height": 1254,
+      "method": "sharp lossless WebP; no resize, crop, retouch or text changes",
+      "decodedRgbaSha256": "6d8f6c00f4e71e639e3343dca2c0db1416a6c98513d1525e25441b21af5f38e9",
+      "pixelIdentical": true,
+      "provenance": "2026-10-03 内置 imagegen 生成的 AI 视觉样例；非造物营平台实测输出或客户案例"
+    }
+  ]
+}
