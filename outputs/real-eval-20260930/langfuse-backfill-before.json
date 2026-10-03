@@ -1,0 +1,57 @@
+{
+  "at": "2026-09-30T10:26:29.770Z",
+  "jobs": [
+    {
+      "id": "real-eval-20260930-v1-C11-job",
+      "imageCalls": 3,
+      "createdAt": "2026-09-30T10:04:22.076Z"
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job",
+      "imageCalls": 3,
+      "createdAt": "2026-09-30T10:03:24.267Z"
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job",
+      "imageCalls": 3,
+      "createdAt": "2026-09-30T10:02:50.433Z"
+    },
+    {
+      "id": "real-eval-20260930-v1-C07-job",
+      "imageCalls": 3,
+      "createdAt": "2026-09-30T10:01:36.879Z"
+    },
+    {
+      "id": "real-eval-20260930-v1-C06-job",
+      "imageCalls": 3,
+      "createdAt": "2026-09-30T10:01:07.752Z"
+    },
+    {
+      "id": "real-eval-20260930-v1-C05-job",
+      "imageCalls": 3,
+      "createdAt": "2026-09-30T10:00:05.567Z"
+    },
+    {
+      "id": "real-eval-20260930-v1-C04-job",
+      "imageCalls": 3,
+      "createdAt": "2026-09-30T09:58:57.365Z"
+    },
+    {
+      "id": "real-eval-20260930-v1-C03-job",
+      "imageCalls": 3,
+      "createdAt": "2026-09-30T09:57:26.518Z"
+    },
+    {
+      "id": "real-eval-20260930-v1-C02-job",
+      "imageCalls": 3,
+      "createdAt": "2026-09-30T09:56:57.223Z"
+    },
+    {
+      "id": "real-eval-20260930-v1-C01-job",
+      "imageCalls": 3,
+      "createdAt": "2026-09-30T09:55:42.200Z"
+    }
+  ],
+  "modelCalls": 30,
+  "method": "standalone_existing_exporter_no_server_restart"
+}

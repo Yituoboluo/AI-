@@ -1,0 +1,13 @@
+﻿用例,场景,原样例,业务结果,自动规则,成品数量,总耗时秒,生图调用,分析模型,生图模型,错误码,错误详情,抠图方式,是否使用抠图降级,是否模拟,人工商用审核,产品任务,证据路径
+"C01","单品自动创意","M001,M009","delivered","pass","3","106.18","3","qwen3-vl-plus","gpt-image-2.5-flare【1k快速1毛】","","","automatic","false","false","未执行","real-eval-20260930-v1-C01-job","C01/result.json"
+"C02","单品规格与包装保持","M002,M010","partial_delivery","fail","2","188.32","3","qwen3-vl-plus","gpt-image-2.5-flare【1k快速1毛】","PROVIDER_UNAVAILABLE","模型服务暂时不可用，请稍后重试。","automatic","false","false","未执行","real-eval-20260930-v1-C02-job","C02/result.json"
+"C03","未经证实卖点防护","M003,M011","delivered","pass","3","90.59","3","qwen3-vl-plus","gpt-image-2.5-flare【1k快速1毛】","","","automatic","false","false","未执行","real-eval-20260930-v1-C03-job","C03/result.json"
+"C04","固定文案与三件套","M004,M012","delivered","pass","3","130.23","3","qwen3-vl-plus","gpt-image-2.5-flare【1k快速1毛】","","","automatic","false","false","未执行","real-eval-20260930-v1-C04-job","C04/result.json"
+"C05","三方向差异与双瓶保持","M005,M013","delivered","pass","3","91.15","3","qwen3-vl-plus","gpt-image-2.5-flare【1k快速1毛】","","","automatic","false","false","未执行","real-eval-20260930-v1-C05-job","C05/result.json"
+"C06","自定义背景与竖版","M006,M014","delivered","pass","3","102.84","3","qwen3-vl-plus","gpt-image-2.5-flare【1k快速1毛】","","","automatic","false","false","未执行","real-eval-20260930-v1-C06-job","C06/result.json"
+"C07","混合规格与数量组合","M007,M015","delivered","pass","3","107.29","3","qwen3-vl-plus","gpt-image-2.5-flare【1k快速1毛】","","","automatic","false","false","未执行","real-eval-20260930-v1-C07-job","C07/result.json"
+"C08","方案与成品完整性","M008,M016","delivered","pass","3","89.26","3","qwen3-vl-plus","gpt-image-2.5-flare【1k快速1毛】","","","automatic","false","false","未执行","real-eval-20260930-v1-C08-job","C08/result.json"
+"C09","未填名称规格的自动策略","M017","delivered","pass","3","125.63","3","qwen3-vl-plus","gpt-image-2.5-flare【1k快速1毛】","","","automatic","false","false","未执行","real-eval-20260930-v1-C09-job","C09/result.json"
+"C10","标题长度边界：17字与20字","M018","expected_rejection","pass","0","2.47","0","","","","","automatic","false","false","未执行","","C10/result.json"
+"C11","无文案极简画面","M019","delivered","pass","3","85.86","3","qwen3-vl-plus","gpt-image-2.5-flare【1k快速1毛】","","","automatic","false","false","未执行","real-eval-20260930-v1-C11-job","C11/result.json"
+"C12","缺少商品图片边界","M020","expected_rejection","pass","0","0.04","0","","","","","","false","false","未执行","","C12/result.json"

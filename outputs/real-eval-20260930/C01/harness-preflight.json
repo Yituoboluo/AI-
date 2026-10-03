@@ -1,0 +1,50 @@
+{
+  "case_id": "C01",
+  "name": "单品自动创意",
+  "source_case_ids": "M001,M009",
+  "batch_id": "real-eval-20260930-v1",
+  "is_simulated": false,
+  "environment": "evaluation",
+  "started_at": "2026-09-30T09:55:03.761Z",
+  "product_commit": "487a7006e357277fc08e345c4dcbf77cd6955011",
+  "scope": "本机产品真实模型调用；不是线上用户行为或投放数据",
+  "input_sha256": "6a25e1a3a4fcc89b0bed77c76c856c3ee509da6e5b593c0fc8f198985d410d87",
+  "settings": {
+    "visualVersion": 2,
+    "conceptCount": 3,
+    "category": "auto",
+    "direction": "auto",
+    "ratio": "square",
+    "customBackground": false,
+    "backgroundPrompt": "",
+    "customCopy": false,
+    "title": "",
+    "subtitle": "",
+    "customLayout": false,
+    "layout": "center"
+  },
+  "expectation": "保留金盖白瓶、1 瓶和包装文字；三套设计方向。",
+  "mapping": "模拟 250mL 改为原图实际包装，不向模型注入虚构规格。",
+  "automatic_paid_retries": 0,
+  "attempts": [
+    {
+      "stage": "exception",
+      "at": "2026-09-30T09:55:03.778Z",
+      "error": {
+        "code": "Error",
+        "message": "browserType.launch: Executable doesn't exist at C:\\Users\\22831\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1234\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+      }
+    }
+  ],
+  "rule_checks": [],
+  "visual_review_status": "not_run",
+  "assets": [],
+  "business_status": "execution_failed",
+  "error": {
+    "code": "Error",
+    "message": "browserType.launch: Executable doesn't exist at C:\\Users\\22831\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1234\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+  },
+  "finished_at": "2026-09-30T09:55:03.780Z",
+  "duration_ms": 19,
+  "contract_status": "fail"
+}

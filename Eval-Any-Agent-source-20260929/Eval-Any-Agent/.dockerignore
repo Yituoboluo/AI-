@@ -1,0 +1,7 @@
+.env
+*.tar
+*.zip
+node_modules
+.next
+prisma/*.db*
+.git

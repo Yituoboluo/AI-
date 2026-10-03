@@ -1,0 +1,38 @@
+[
+  {
+    "case_id": "C03",
+    "concept": "studio",
+    "reason": "AI_VISUAL_LOCAL_CONTRAST",
+    "feedback_id": "ai-pre-review-C03-studio-20260930",
+    "badcase_id": "bc_ai-pre-review-C03-studio-20260930",
+    "reviewer": "AI助手",
+    "human_review_created": false
+  },
+  {
+    "case_id": "C05",
+    "concept": "scene",
+    "reason": "AI_VISUAL_CJK_LINEBREAK",
+    "feedback_id": "ai-pre-review-C05-scene-20260930",
+    "badcase_id": "bc_ai-pre-review-C05-scene-20260930",
+    "reviewer": "AI助手",
+    "human_review_created": false
+  },
+  {
+    "case_id": "C06",
+    "concept": "graphic",
+    "reason": "AI_VISUAL_PRODUCT_CROPPED",
+    "feedback_id": "ai-pre-review-C06-graphic-20260930",
+    "badcase_id": "bc_ai-pre-review-C06-graphic-20260930",
+    "reviewer": "AI助手",
+    "human_review_created": false
+  },
+  {
+    "case_id": "C06",
+    "concept": "scene",
+    "reason": "AI_VISUAL_BACKGROUND_CONSTRAINT",
+    "feedback_id": "ai-pre-review-C06-scene-20260930",
+    "badcase_id": "bc_ai-pre-review-C06-scene-20260930",
+    "reviewer": "AI助手",
+    "human_review_created": false
+  }
+]

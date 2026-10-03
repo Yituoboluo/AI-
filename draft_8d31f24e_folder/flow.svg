@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="490" viewBox="0 0 1050 490">
+<rect x="0" y="0" width="1050" height="490" fill="#ffffff"/>
+<text x="45" y="48" font-family="Noto Sans SC" font-size="28" font-weight="700" fill="#242424">一次图片创作</text>
+<text x="45" y="80" font-family="Noto Sans SC" font-size="18" fill="#5c5c5c">从原图开始，拿到文件后记录质量与使用意愿</text>
+<circle cx="170" cy="143" r="28" fill="#fff3e8" stroke="#bb500e" stroke-width="1.5"/>
+<text x="170" y="151" text-anchor="middle" font-family="Noto Sans SC" font-size="24" font-weight="700" fill="#98400c">1</text>
+<text x="170" y="208" text-anchor="middle" font-family="Noto Sans SC" font-size="23" font-weight="600" fill="#242424">上传商品图</text>
+<text x="170" y="239" text-anchor="middle" font-family="Noto Sans SC" font-size="18" fill="#5c5c5c">保留原图，预览抠图</text>
+<circle cx="525" cy="143" r="28" fill="#fff3e8" stroke="#bb500e" stroke-width="1.5"/>
+<text x="525" y="151" text-anchor="middle" font-family="Noto Sans SC" font-size="24" font-weight="700" fill="#98400c">2</text>
+<text x="525" y="208" text-anchor="middle" font-family="Noto Sans SC" font-size="23" font-weight="600" fill="#242424">选择创作要求</text>
+<text x="525" y="239" text-anchor="middle" font-family="Noto Sans SC" font-size="18" fill="#5c5c5c">一套或三套，方图或竖图</text>
+<circle cx="880" cy="143" r="28" fill="#fff3e8" stroke="#bb500e" stroke-width="1.5"/>
+<text x="880" y="151" text-anchor="middle" font-family="Noto Sans SC" font-size="24" font-weight="700" fill="#98400c">3</text>
+<text x="880" y="208" text-anchor="middle" font-family="Noto Sans SC" font-size="23" font-weight="600" fill="#242424">生成不同方案</text>
+<text x="880" y="239" text-anchor="middle" font-family="Noto Sans SC" font-size="18" fill="#5c5c5c">按实际进度展示结果</text>
+<circle cx="880" cy="330" r="28" fill="#fff3e8" stroke="#bb500e" stroke-width="1.5"/>
+<text x="880" y="338" text-anchor="middle" font-family="Noto Sans SC" font-size="24" font-weight="700" fill="#98400c">4</text>
+<text x="880" y="395" text-anchor="middle" font-family="Noto Sans SC" font-size="23" font-weight="600" fill="#242424">比较与调整</text>
+<text x="880" y="426" text-anchor="middle" font-family="Noto Sans SC" font-size="18" fill="#5c5c5c">选择方案，修改文字</text>
+<circle cx="525" cy="330" r="28" fill="#fff3e8" stroke="#bb500e" stroke-width="1.5"/>
+<text x="525" y="338" text-anchor="middle" font-family="Noto Sans SC" font-size="24" font-weight="700" fill="#98400c">5</text>
+<text x="525" y="395" text-anchor="middle" font-family="Noto Sans SC" font-size="23" font-weight="600" fill="#242424">保存并下载</text>
+<text x="525" y="426" text-anchor="middle" font-family="Noto Sans SC" font-size="18" fill="#5c5c5c">取回当前版本文件</text>
+<circle cx="170" cy="330" r="28" fill="#fff3e8" stroke="#bb500e" stroke-width="1.5"/>
+<text x="170" y="338" text-anchor="middle" font-family="Noto Sans SC" font-size="24" font-weight="700" fill="#98400c">6</text>
+<text x="170" y="395" text-anchor="middle" font-family="Noto Sans SC" font-size="23" font-weight="600" fill="#242424">质量与采用</text>
+<text x="170" y="426" text-anchor="middle" font-family="Noto Sans SC" font-size="18" fill="#5c5c5c">有问题先修正再检查</text>
+<polyline points="205,143 490,143" fill="none" stroke="#6b6b6b" stroke-width="2"/>
+<polygon points="490,143 481,138 481,148" fill="#6b6b6b"/>
+<polyline points="560,143 845,143" fill="none" stroke="#6b6b6b" stroke-width="2"/>
+<polygon points="845,143 836,138 836,148" fill="#6b6b6b"/>
+<polyline points="915,143 1000,143 1000,330 915,330" fill="none" stroke="#6b6b6b" stroke-width="2"/>
+<polygon points="915,330 924,325 924,335" fill="#6b6b6b"/>
+<polyline points="845,330 560,330" fill="none" stroke="#6b6b6b" stroke-width="2"/>
+<polygon points="560,330 569,325 569,335" fill="#6b6b6b"/>
+<polyline points="490,330 205,330" fill="none" stroke="#6b6b6b" stroke-width="2"/>
+<polygon points="205,330 214,325 214,335" fill="#6b6b6b"/>
+</svg>

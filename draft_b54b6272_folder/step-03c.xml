@@ -1,0 +1,32 @@
+<h2 seq="auto">Trace 记录结构（MOCK）</h2>
+
+<pre lang="json"><code>{
+  "task_id": "mock-task-001",
+  "job_id": "mock-job-001",
+  "trace_id": "mock-job-001",
+  "is_simulated": true,
+  "input_revision": 1,
+  "workflow_version": "proposed-v1",
+  "stages": [
+    {
+      "span_id": "span-01",
+      "name": "plan",
+      "status": "succeeded",
+      "prompt_version": "plan-v1"
+    },
+    {
+      "span_id": "span-02",
+      "parent_span_id": "span-01",
+      "name": "generate",
+      "status": "succeeded",
+      "output_ref": "mock://generated"
+    },
+    {
+      "span_id": "span-03",
+      "parent_span_id": "span-02",
+      "name": "persist",
+      "status": "failed",
+      "error_code": "STORAGE_WRITE_FAILED"
+    }
+  ]
+}</code></pre>

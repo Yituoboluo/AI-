@@ -1,0 +1,954 @@
+{
+  "case_id": "C05",
+  "name": "三方向差异与双瓶保持",
+  "source_case_ids": "M005,M013",
+  "batch_id": "real-eval-20260930-v1",
+  "is_simulated": false,
+  "environment": "evaluation",
+  "started_at": "2026-09-30T10:00:03.184Z",
+  "product_commit": "487a7006e357277fc08e345c4dcbf77cd6955011",
+  "scope": "本机产品真实模型调用；不是线上用户行为或投放数据",
+  "input_sha256": "168d405967010dbf532a0c62c8eeea2e65fcc004db68453f858c84ee51c9a5a3",
+  "settings": {
+    "visualVersion": 2,
+    "conceptCount": 3,
+    "category": "auto",
+    "direction": "auto",
+    "ratio": "square",
+    "customBackground": false,
+    "backgroundPrompt": "",
+    "customCopy": false,
+    "title": "",
+    "subtitle": "",
+    "customLayout": false,
+    "layout": "center"
+  },
+  "expectation": "保留 2 瓶，三方向在场景、光影、构图上有差异。",
+  "mapping": "原图真实双瓶。",
+  "automatic_paid_retries": 0,
+  "attempts": [
+    {
+      "stage": "prepare_product",
+      "at": "2026-09-30T10:00:05.451Z",
+      "segmentation": "automatic",
+      "fallback": false,
+      "error": null,
+      "duration_ms": 1994
+    },
+    {
+      "stage": "save_project",
+      "at": "2026-09-30T10:00:05.537Z",
+      "http_status": 200,
+      "duration_ms": 84,
+      "data": {
+        "project": {
+          "id": "real-eval-20260930-v1-C05",
+          "name": "C05真实评测",
+          "createdAt": "2026-09-30T10:00:05.529Z",
+          "updatedAt": "2026-09-30T10:00:05.529Z",
+          "serverVersion": 1,
+          "thumbnail": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/5aba9e9575a52eff4d026cda07359fa0d00cc5129d6379090389a3b2ae17179e.png",
+          "deletedAt": null,
+          "demoRetired": false,
+          "draft": {
+            "creationMode": "quick",
+            "quick": {
+              "inputId": "real-eval-20260930-v1-C05-input",
+              "settings": {
+                "visualVersion": 2,
+                "conceptCount": 3,
+                "category": "auto",
+                "direction": "auto",
+                "ratio": "square",
+                "customBackground": false,
+                "backgroundPrompt": "",
+                "customCopy": false,
+                "title": "",
+                "subtitle": "",
+                "customLayout": false,
+                "layout": "center"
+              },
+              "segmentation": "automatic",
+              "originalImageData": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/b400e02e5283b753794f8b3aa59ed6c87e6a0a35404938b531026f521afc84d1.png"
+            },
+            "productName": "",
+            "sellingPoint": "",
+            "campaign": "C05真实评测",
+            "headline": "",
+            "price": "",
+            "originalPrice": "",
+            "startDate": "",
+            "endDate": "",
+            "imageName": "形动力4.0鲜活牛乳950ml_2瓶白底.png",
+            "background": "white",
+            "template": "airy",
+            "size": "square",
+            "revision": 1,
+            "approvedRevision": null,
+            "generated": false,
+            "isExample": false,
+            "submitted": false,
+            "everApproved": false,
+            "exportedRevision": null,
+            "candidate": -1,
+            "copySource": "preset",
+            "backgroundSource": "preset",
+            "copyJobId": null,
+            "backgroundJobId": null,
+            "candidates": [],
+            "history": [],
+            "imageData": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/5aba9e9575a52eff4d026cda07359fa0d00cc5129d6379090389a3b2ae17179e.png",
+            "backgroundData": null
+          },
+          "cloud": true
+        }
+      }
+    },
+    {
+      "stage": "cutout_telemetry",
+      "at": "2026-09-30T10:00:05.559Z",
+      "http_status": 200,
+      "duration_ms": 20,
+      "data": {
+        "saved": true,
+        "jobId": null
+      }
+    },
+    {
+      "stage": "create_job",
+      "at": "2026-09-30T10:00:05.575Z",
+      "http_status": 201,
+      "duration_ms": 14,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C05-job",
+          "projectId": "real-eval-20260930-v1-C05",
+          "taskId": "task_e641c4362fadb78ac781ece03e1f03cfc69673920fdff43a0b0e7125ad1b61f8",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C05",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 0,
+          "progress": null,
+          "stage": null,
+          "strategySource": null,
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "queued",
+          "createdAt": "2026-09-30T10:00:05.567Z",
+          "startedAt": null,
+          "finishedAt": null,
+          "result": null,
+          "canRecover": false,
+          "error": null,
+          "usage": null,
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "run_direction_0",
+      "at": "2026-09-30T10:00:40.621Z",
+      "http_status": 200,
+      "duration_ms": 35044,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C05-job",
+          "projectId": "real-eval-20260930-v1-C05",
+          "taskId": "task_e641c4362fadb78ac781ece03e1f03cfc69673920fdff43a0b0e7125ad1b61f8",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C05",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 1,
+          "progress": {
+            "completed": 1,
+            "total": 3,
+            "active": 1
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "queued",
+          "createdAt": "2026-09-30T10:00:05.567Z",
+          "startedAt": "2026-09-30T10:00:05.581Z",
+          "finishedAt": null,
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#4CAF50"
+                  },
+                  "title": "清早的活力，从一瓶鲜润开始",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+                  "lighting": "左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#8BC34A"
+                  },
+                  "title": "素净台面，凝固一瞬清新质感",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质。哑光白石板桌面，两瓶并列，旁置干压青柠片与粗陶小碟盛亚麻籽，背景为微糙水泥纹理墙。顶侧逆光勾勒瓶肩轮廓，正面漫反射柔光消除高光溢出",
+                  "lighting": "顶侧逆光勾勒瓶肩轮廓，正面漫反射柔光消除高光溢出",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#2E7D32"
+                  },
+                  "title": "绿意跃动，线条间流淌轻盈节奏",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯均匀影棚光，无明显方向性，强调平面构成与色块对比",
+                  "lighting": "纯均匀影棚光，无明显方向性，强调平面构成与色块对比",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "清早的活力，从一瓶鲜润开始",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/5aba9e9575a52eff4d026cda07359fa0d00cc5129d6379090389a3b2ae17179e.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/bb07ae9090f45fa8e88bd4bb26610529e8b567fe72cae9a608dfe8f2957d50b9.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/bb07ae9090f45fa8e88bd4bb26610529e8b567fe72cae9a608dfe8f2957d50b9.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 1,
+            "compositions": [],
+            "compositionVersion": 0
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 333,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 1,
+            "images": 1,
+            "confirmedConcepts": [
+              "scene"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "run_direction_1",
+      "at": "2026-09-30T10:01:07.571Z",
+      "http_status": 200,
+      "duration_ms": 26949,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C05-job",
+          "projectId": "real-eval-20260930-v1-C05",
+          "taskId": "task_e641c4362fadb78ac781ece03e1f03cfc69673920fdff43a0b0e7125ad1b61f8",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C05",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 2,
+          "progress": {
+            "completed": 2,
+            "total": 3,
+            "active": 2
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "queued",
+          "createdAt": "2026-09-30T10:00:05.567Z",
+          "startedAt": "2026-09-30T10:00:40.641Z",
+          "finishedAt": null,
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#4CAF50"
+                  },
+                  "title": "清早的活力，从一瓶鲜润开始",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+                  "lighting": "左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#8BC34A"
+                  },
+                  "title": "素净台面，凝固一瞬清新质感",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质。哑光白石板桌面，两瓶并列，旁置干压青柠片与粗陶小碟盛亚麻籽，背景为微糙水泥纹理墙。顶侧逆光勾勒瓶肩轮廓，正面漫反射柔光消除高光溢出",
+                  "lighting": "顶侧逆光勾勒瓶肩轮廓，正面漫反射柔光消除高光溢出",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#2E7D32"
+                  },
+                  "title": "绿意跃动，线条间流淌轻盈节奏",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯均匀影棚光，无明显方向性，强调平面构成与色块对比",
+                  "lighting": "纯均匀影棚光，无明显方向性，强调平面构成与色块对比",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "清早的活力，从一瓶鲜润开始",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/5aba9e9575a52eff4d026cda07359fa0d00cc5129d6379090389a3b2ae17179e.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/bb07ae9090f45fa8e88bd4bb26610529e8b567fe72cae9a608dfe8f2957d50b9.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/bb07ae9090f45fa8e88bd4bb26610529e8b567fe72cae9a608dfe8f2957d50b9.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "studio",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/f4dc058090433f84d643aa5d582999f7c7752898dd8b075898d6d7ee07795609.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 2,
+            "compositions": [],
+            "compositionVersion": 0
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 333,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 2,
+            "images": 2,
+            "confirmedConcepts": [
+              "scene",
+              "studio"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "run_direction_2",
+      "at": "2026-09-30T10:01:33.177Z",
+      "http_status": 200,
+      "duration_ms": 25604,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C05-job",
+          "projectId": "real-eval-20260930-v1-C05",
+          "taskId": "task_e641c4362fadb78ac781ece03e1f03cfc69673920fdff43a0b0e7125ad1b61f8",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C05",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 3,
+          "progress": {
+            "completed": 3,
+            "total": 3,
+            "active": 3
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "succeeded",
+          "createdAt": "2026-09-30T10:00:05.567Z",
+          "startedAt": "2026-09-30T10:01:07.628Z",
+          "finishedAt": "2026-09-30T10:01:33.162Z",
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#4CAF50"
+                  },
+                  "title": "清早的活力，从一瓶鲜润开始",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+                  "lighting": "左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#8BC34A"
+                  },
+                  "title": "素净台面，凝固一瞬清新质感",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质。哑光白石板桌面，两瓶并列，旁置干压青柠片与粗陶小碟盛亚麻籽，背景为微糙水泥纹理墙。顶侧逆光勾勒瓶肩轮廓，正面漫反射柔光消除高光溢出",
+                  "lighting": "顶侧逆光勾勒瓶肩轮廓，正面漫反射柔光消除高光溢出",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#2E7D32"
+                  },
+                  "title": "绿意跃动，线条间流淌轻盈节奏",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯均匀影棚光，无明显方向性，强调平面构成与色块对比",
+                  "lighting": "纯均匀影棚光，无明显方向性，强调平面构成与色块对比",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "清早的活力，从一瓶鲜润开始",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/5aba9e9575a52eff4d026cda07359fa0d00cc5129d6379090389a3b2ae17179e.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/bb07ae9090f45fa8e88bd4bb26610529e8b567fe72cae9a608dfe8f2957d50b9.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/bb07ae9090f45fa8e88bd4bb26610529e8b567fe72cae9a608dfe8f2957d50b9.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "studio",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/f4dc058090433f84d643aa5d582999f7c7752898dd8b075898d6d7ee07795609.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "graphic",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/e656995e68dd08627d276fa137936046a6a3431fa5a15344ee9036a01c54fa6d.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 3,
+            "compositions": [],
+            "compositionVersion": 0
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 333,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 3,
+            "images": 3,
+            "confirmedConcepts": [
+              "scene",
+              "studio",
+              "graphic"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "compose_and_save",
+      "at": "2026-09-30T10:01:34.234Z",
+      "http_status": 200,
+      "duration_ms": 648,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C05-job",
+          "projectId": "real-eval-20260930-v1-C05",
+          "taskId": "task_e641c4362fadb78ac781ece03e1f03cfc69673920fdff43a0b0e7125ad1b61f8",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C05",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 3,
+          "progress": {
+            "completed": 3,
+            "total": 3,
+            "active": 3
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "succeeded",
+          "createdAt": "2026-09-30T10:00:05.567Z",
+          "startedAt": "2026-09-30T10:01:07.628Z",
+          "finishedAt": "2026-09-30T10:01:33.162Z",
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#4CAF50"
+                  },
+                  "title": "清早的活力，从一瓶鲜润开始",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+                  "lighting": "左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#8BC34A"
+                  },
+                  "title": "素净台面，凝固一瞬清新质感",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质。哑光白石板桌面，两瓶并列，旁置干压青柠片与粗陶小碟盛亚麻籽，背景为微糙水泥纹理墙。顶侧逆光勾勒瓶肩轮廓，正面漫反射柔光消除高光溢出",
+                  "lighting": "顶侧逆光勾勒瓶肩轮廓，正面漫反射柔光消除高光溢出",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#2E7D32"
+                  },
+                  "title": "绿意跃动，线条间流淌轻盈节奏",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯均匀影棚光，无明显方向性，强调平面构成与色块对比",
+                  "lighting": "纯均匀影棚光，无明显方向性，强调平面构成与色块对比",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "清早的活力，从一瓶鲜润开始",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/5aba9e9575a52eff4d026cda07359fa0d00cc5129d6379090389a3b2ae17179e.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/bb07ae9090f45fa8e88bd4bb26610529e8b567fe72cae9a608dfe8f2957d50b9.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/bb07ae9090f45fa8e88bd4bb26610529e8b567fe72cae9a608dfe8f2957d50b9.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "studio",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/f4dc058090433f84d643aa5d582999f7c7752898dd8b075898d6d7ee07795609.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "graphic",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/e656995e68dd08627d276fa137936046a6a3431fa5a15344ee9036a01c54fa6d.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 3,
+            "compositions": [
+              {
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/01b16f725c3c07a208c1215d9b80c2588b33e36271e57877424ccbb9214364ea.png",
+                "title": "清早的活力，从一瓶鲜润开始",
+                "subtitle": "",
+                "layout": "right",
+                "conceptId": "scene",
+                "name": "日常食光",
+                "assetId": "asset_real-eval-20260930-v1-C05-job_v1_0"
+              },
+              {
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/04154c34a81933a02550d17463d55ba4880f438d6d01d79667e149ce38fcd7a2.png",
+                "title": "素净台面，凝固一瞬清新质感",
+                "subtitle": "",
+                "layout": "center",
+                "conceptId": "studio",
+                "name": "包装质感",
+                "assetId": "asset_real-eval-20260930-v1-C05-job_v1_1"
+              },
+              {
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/fbb7b958c2ee5480439a8f342e77fe4c813fd5f0fc868ef8eadd3ca818d7fd58.png",
+                "title": "绿意跃动，线条间流淌轻盈节奏",
+                "subtitle": "",
+                "layout": "left",
+                "conceptId": "graphic",
+                "name": "色彩灵感",
+                "assetId": "asset_real-eval-20260930-v1-C05-job_v1_2"
+              }
+            ],
+            "compositionVersion": 1
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 333,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 3,
+            "images": 3,
+            "confirmedConcepts": [
+              "scene",
+              "studio",
+              "graphic"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    }
+  ],
+  "rule_checks": [],
+  "visual_review_status": "not_run",
+  "assets": [],
+  "cutout": {
+    "segmentation": "automatic",
+    "fallback": false,
+    "error": null,
+    "duration_ms": 1994
+  },
+  "project_id": "real-eval-20260930-v1-C05",
+  "job_id": "real-eval-20260930-v1-C05-job",
+  "actual_plan": {
+    "visualVersion": 2,
+    "rulesVersion": "category-0.2",
+    "category": "food",
+    "categorySource": "visual",
+    "productName": "商品创意",
+    "ratio": "square",
+    "lockedLayout": false,
+    "strategySource": "model",
+    "concepts": [
+      {
+        "id": "scene",
+        "name": "日常食光",
+        "intent": "生活场景",
+        "category": "food",
+        "layout": "right",
+        "font": "serif",
+        "theme": "warm",
+        "palette": {
+          "background": "#E9DBC8",
+          "text": "#443227",
+          "accent": "#4CAF50"
+        },
+        "title": "清早的活力，从一瓶鲜润开始",
+        "subtitle": "",
+        "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+        "lighting": "左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+        "ratio": "square",
+        "status": "planned"
+      },
+      {
+        "id": "studio",
+        "name": "包装质感",
+        "intent": "质感静物",
+        "category": "food",
+        "layout": "center",
+        "font": "sans",
+        "theme": "dark",
+        "palette": {
+          "background": "#222A32",
+          "text": "#FFF6E9",
+          "accent": "#8BC34A"
+        },
+        "title": "素净台面，凝固一瞬清新质感",
+        "subtitle": "",
+        "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质。哑光白石板桌面，两瓶并列，旁置干压青柠片与粗陶小碟盛亚麻籽，背景为微糙水泥纹理墙。顶侧逆光勾勒瓶肩轮廓，正面漫反射柔光消除高光溢出",
+        "lighting": "顶侧逆光勾勒瓶肩轮廓，正面漫反射柔光消除高光溢出",
+        "ratio": "square",
+        "status": "planned"
+      },
+      {
+        "id": "graphic",
+        "name": "色彩灵感",
+        "intent": "图形海报",
+        "category": "food",
+        "layout": "left",
+        "font": "display",
+        "theme": "fresh",
+        "palette": {
+          "background": "#D7E5E7",
+          "text": "#203B43",
+          "accent": "#2E7D32"
+        },
+        "title": "绿意跃动，线条间流淌轻盈节奏",
+        "subtitle": "",
+        "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯均匀影棚光，无明显方向性，强调平面构成与色块对比",
+        "lighting": "纯均匀影棚光，无明显方向性，强调平面构成与色块对比",
+        "ratio": "square",
+        "status": "planned"
+      }
+    ],
+    "title": "清早的活力，从一瓶鲜润开始",
+    "subtitle": "",
+    "layout": "right",
+    "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。左前45°柔光主光+右侧补光，模拟自然窗光，阴影柔和过渡",
+    "productLocks": [],
+    "renderRoute": "reference_scene_edit",
+    "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/5aba9e9575a52eff4d026cda07359fa0d00cc5129d6379090389a3b2ae17179e.png",
+    "referenceConstraints": [
+      "原商品轮廓",
+      "包装与标识",
+      "可见颜色",
+      "部件与数量"
+    ]
+  },
+  "usage": {
+    "visionInputTokens": 976,
+    "visionOutputTokens": 333,
+    "visionModel": "qwen3-vl-plus",
+    "visionPlanSource": "model",
+    "imageCalls": 3,
+    "images": 3,
+    "confirmedConcepts": [
+      "scene",
+      "studio",
+      "graphic"
+    ]
+  },
+  "model": "gpt-image-2.5-flare【1k快速1毛】",
+  "provider": "Portdan",
+  "generation_status": "succeeded",
+  "generation_error": null,
+  "concept_errors": [],
+  "composition_ms": 407
+}

@@ -1,0 +1,16 @@
+﻿事件或阶段,触发条件或来源,关键字段,用途与实现状态
+product_input_started / ready / failed,上传开始、取得可用素材或失败；客户端,inputId、inputRevision、尺寸、imageHash、errorCode,上传漏斗与输入异常；代码已实现
+cutout_started / cutout_completed,抠图开始与结束；客户端,segmentation、durationMs、status、modelVersion,成功/失败/跳过/取消分开；本批 10 个生成场景有抠图记录
+generation_accepted,服务端校验通过并持久化 job,taskId、jobId、attemptNo、model、workflowVersion,受理分母与首轮/重试；本批 10 个 job
+creative_plan_started / completed,商品分析及方案解析完成或失败；服务端,actualModel、promptVersion、rulesVersion、strategySource,分析耗时、模型回退与版本；本批 10 次分析
+image_generation_started / completed,每个方向的模型请求开始与结束；服务端,conceptId、actualModel、durationMs、status、errorCode,实际调用分母；本批 completed 30 条，其中 1 条 failed
+checkpoint / image_download / background_persist 阶段事件,响应检查点、下载、底图持久化；服务端,spanId、conceptId、providerRequestId、recovery,拆分模型与存储失败；路径适用时上报，不能假定所有服务商都有 request_id
+composition_completed,浏览器完成文字合成或失败；客户端,jobId、compositionVersion、durationMs、status,布局阶段耗时与异常；与保存事件分开
+asset_persist_started / completed；asset_persisted,成品保存阶段与逐张持久化；服务端,assetId、assetVersion、outputIndex、conceptId,成品分母与版本追踪；本批 29 张
+asset_rule_checked,文件、尺寸、文案字段规则执行完成；服务端,rubricVersion、score、failedChecks、assetId,确定性检查；本批 29/29 通过，不涵盖商品与设计
+result_viewed / result_load_failed,图片加载且可见，或加载失败；客户端,jobId、assetId、assetVersion、receivedAt,真实曝光与首图耗时；测试器读取不等于用户浏览
+asset_feedback_saved,采用、拒绝、撤销记录保存成功；服务端,feedback、reasonCode、assetId、version、rubricVersion,采用、人工评分与 Badcase 关联；本批正式人工判定 0
+group_diversity_reviewed,当前整组差异评审保存成功；服务端,jobId、version、axes、passed、rubricVersion,差异达标率；本批尚无正式评审
+workspace_events.kind=export,服务端受理 /api/jobs/:id/export,jobId、compositionVersion、outputIndex（由三者关联 assetId，未直接存储）,当前导出事件；不表示已写入本地磁盘；尚未归一到 telemetry_events
+generation_failed / interrupted,明确失败或中断；服务端,stage、errorCode、conceptId、recovery,按失败阶段归因；部分交付也保留方向失败
+retry_requested / recovery_requested,重新生图或已有结果恢复；服务端,parentJobId、attemptNo；executionId、paidGeneration,重试新增 job；恢复沿用原 job；恢复不自动等于新付费调用

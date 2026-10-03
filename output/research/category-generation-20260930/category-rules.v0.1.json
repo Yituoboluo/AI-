@@ -1,0 +1,512 @@
+{
+  "version": "0.1",
+  "createdAt": "2026-09-30",
+  "status": "research_draft_not_integrated_or_validated",
+  "product": "造物营",
+  "objective": "一个真实商品生成三套有明显视觉差异的创意样稿",
+  "researchScope": {
+    "taobaoSamplingCompleted": false,
+    "taobaoAccessStatus": "browser_site_safety_blocked",
+    "officialBrandPagesVisuallyInspected": 4,
+    "visualObservations": 10,
+    "independentSkuCount": null,
+    "note": "同一页面多个画面不等于独立 SKU；仅覆盖乳品、头戴耳机、T 恤和扶手椅。",
+    "performanceEvidence": "未获取点击、转化或投放实验数据"
+  },
+  "sources": [
+    {
+      "id": "yili",
+      "url": "https://www.yili.com/product/1761",
+      "scope": "金典冷藏鲜牛奶官方页面",
+      "observations": [
+        "Y01 首屏产品与花枝、台座、标题分区",
+        "Y02 不同瓶型和规格的系列陈列"
+      ]
+    },
+    {
+      "id": "sony",
+      "url": "https://www.sony.com.cn/content/sonyportal/zh-cn/cms/newscenter/product/2026/20260520.html",
+      "scope": "索尼头戴耳机发布页",
+      "observations": [
+        "S01 人物和双色产品分区",
+        "S02 城市穿搭佩戴场景",
+        "S03 奶茶棕耳机与暖棕服装"
+      ]
+    },
+    {
+      "id": "uniqlo",
+      "url": "https://www.uniqlo.com/tw/zh/contents/feature/masterpiece/product/airism-cotton-oversized-t-shirt/",
+      "scope": "优衣库台湾站 T 恤专题",
+      "observations": [
+        "U01 衣身轮廓与褶皱",
+        "U02 多色层叠陈列",
+        "U03 大小两件平铺对比"
+      ]
+    },
+    {
+      "id": "ikea",
+      "url": "https://www.ikea.cn/cn/zh/p/poaeng-bo-ang-di-bei-fu-shou-yi-tian-ran-se-mi-se-kai-tuo-tian-ran-se-mi-se-s69551607/",
+      "scope": "宜家中国扶手椅产品页",
+      "observations": [
+        "I01 白底单品",
+        "I02 黄色房间、配饰与定向光影"
+      ]
+    },
+    {
+      "id": "qwen_edit",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-image-edit-guide",
+      "scope": "公开编辑能力文档，非本应用集成证据"
+    },
+    {
+      "id": "tryon",
+      "url": "https://help.aliyun.com/zh/model-studio/outfitanyone-api",
+      "scope": "公开试衣能力文档，非本应用集成证据"
+    }
+  ],
+  "precedence": [
+    "user_constraints",
+    "confirmed_product_facts",
+    "asset_and_provider_capabilities",
+    "category_rules",
+    "creative_diversity_heuristics"
+  ],
+  "inputContract": {
+    "sourceAssets": [
+      "assetId",
+      "role:product|detail|style_reference|person",
+      "assetType:transparent|white_background|scene|poster",
+      "width",
+      "height",
+      "viewAngle",
+      "occlusion",
+      "qualityFlags"
+    ],
+    "productFacts": [
+      "field",
+      "value",
+      "source",
+      "status:confirmed|observed|inferred|unknown"
+    ],
+    "optionalContext": [
+      "outputPurpose",
+      "aspectRatio",
+      "confirmedSellingPoints",
+      "brandPalette",
+      "userStylePreference",
+      "confirmedBundle"
+    ],
+    "defaultPurpose": "创意样稿",
+    "defaultMissingCopy": "只使用可确认的商品名称，或不涉及性能的氛围短句",
+    "askOnlyWhenNecessary": [
+      "主体无法识别",
+      "真实售卖数量影响画面但无法确定",
+      "商品被严重遮挡且无法保留"
+    ]
+  },
+  "universalRules": [
+    "模型看图与 OCR 提供候选，不自动确认为品牌、规格、功效或材质事实",
+    "商品与参考风格图必须标清角色，不迁移参考图里的商品、卖点和 Logo",
+    "锁定主体轮廓、结构、包装文字、真实颜色与件数",
+    "按原图角度与光线选场景；单角度不能支持未见背面或内部结构",
+    "精确文案使用真实字体作为独立可编辑层",
+    "背景允许与方案相关的道具和空间结构，但保护商品落点和文字区",
+    "单品、系列陈列和售卖套装分别处理；不推断赠品",
+    "三稿各有独立计划；用户要求统一风格时优先尊重该约束",
+    "生成结果与保存结果分开追踪；已有结果优先恢复",
+    "输出是待评审素材，不能自动标为商用审核通过"
+  ],
+  "categories": [
+    {
+      "id": "food_dairy",
+      "label": "乳品",
+      "evidenceStatus": "small_sample_hypothesis",
+      "sources": [
+        "yili"
+      ],
+      "observedScope": "包装牛奶；其他食品待补样本",
+      "productLocks": [
+        "瓶/盒轮廓",
+        "瓶盖",
+        "标签",
+        "口味",
+        "容量",
+        "品牌",
+        "数量"
+      ],
+      "recipes": [
+        {
+          "id": "morning_table",
+          "intent": "早餐饮用联想",
+          "scene": "少量早餐道具、木质或亚麻台面",
+          "composition": "依据商品原角度放置；上方或侧面留标题区",
+          "lighting": "与原图兼容的侧窗柔光",
+          "typography": "短标题与次级信息形成明显层级",
+          "guards": [
+            "不增加营养承诺",
+            "不把场景道具写成配料或赠品"
+          ]
+        },
+        {
+          "id": "package_studio",
+          "intent": "包装与质感",
+          "scene": "提取包装色的台座或抽象空间",
+          "composition": "商品与文字不对称，保留轮廓",
+          "lighting": "与原图兼容的塑形光",
+          "typography": "凝练标题与克制辅助信息",
+          "guards": [
+            "不重画标签",
+            "不把瓶型变成其他 SKU"
+          ]
+        },
+        {
+          "id": "brand_graphic",
+          "intent": "品牌色与图形节奏",
+          "scene": "包装色衍生的曲线或层次结构",
+          "composition": "主商品与标题建立视觉节奏",
+          "lighting": "按素材保留或统一",
+          "typography": "较强的字号和方向对比",
+          "guards": [
+            "装饰不等同于原料",
+            "无证据不显示参数"
+          ]
+        }
+      ],
+      "unsupportedWithoutExtraAssets": [
+        "食品剖面",
+        "真实配料特写",
+        "倒奶与复杂液体接触",
+        "新增包装角度"
+      ]
+    },
+    {
+      "id": "electronics_headphones",
+      "label": "数码首版：头戴耳机",
+      "evidenceStatus": "small_sample_hypothesis",
+      "sources": [
+        "sony"
+      ],
+      "observedScope": "头戴耳机；其他电子产品需要按结构和用途补规则",
+      "productLocks": [
+        "耳罩",
+        "头梁",
+        "按键",
+        "接口",
+        "Logo",
+        "真实配色",
+        "比例",
+        "数量"
+      ],
+      "recipes": [
+        {
+          "id": "material_still_life",
+          "intent": "材质与工业外观",
+          "scene": "依据机身质感选择几何或低干扰背景",
+          "composition": "主体轮廓清晰，原图角度优先",
+          "lighting": "沿用或匹配已有高光",
+          "typography": "简短清楚的层级",
+          "guards": [
+            "不凭空新增微距细节",
+            "不制造内部结构图"
+          ]
+        },
+        {
+          "id": "desk_context",
+          "intent": "日常使用联想",
+          "scene": "桌面或收纳环境，具体场景依商品用途选择",
+          "composition": "真实尺度与接触关系",
+          "lighting": "匹配场景与商品光向",
+          "typography": "以环境空区排短标题",
+          "guards": [
+            "不宣称道具随商品赠送",
+            "不添加未经确认的兼容性"
+          ]
+        },
+        {
+          "id": "product_graphic",
+          "intent": "轮廓与配色表达",
+          "scene": "产品色和圆弧衍生的抽象结构",
+          "composition": "近景商品加明显文字对比",
+          "lighting": "突出轮廓且保留细节",
+          "typography": "大标题与小辅助信息",
+          "guards": [
+            "不固定使用霓虹科技风",
+            "不编造性能数字"
+          ]
+        }
+      ],
+      "unsupportedWithoutExtraAssets": [
+        "准确佩戴",
+        "手持交互",
+        "拆机和爆炸结构图",
+        "未提供的背面与接口"
+      ]
+    },
+    {
+      "id": "apparel_tshirt",
+      "label": "服装首版：T 恤平铺/挂拍",
+      "evidenceStatus": "small_sample_hypothesis",
+      "sources": [
+        "uniqlo"
+      ],
+      "observedScope": "T 恤；其他服装形态待补样本",
+      "productLocks": [
+        "领口",
+        "袖长",
+        "版型",
+        "图案",
+        "纽扣/口袋",
+        "纹理",
+        "颜色",
+        "款式与件数"
+      ],
+      "recipes": [
+        {
+          "id": "silhouette",
+          "intent": "轮廓与可见面料",
+          "scene": "低干扰背景和合适投影",
+          "composition": "保留原图服装形态，强调轮廓与留白",
+          "lighting": "匹配已有褶皱阴影",
+          "typography": "简洁标题",
+          "guards": [
+            "不无依据改动衣服姿态",
+            "不将宽松版改成修身版"
+          ]
+        },
+        {
+          "id": "flatlay_context",
+          "intent": "搭配氛围",
+          "scene": "经确认的辅件或低干扰生活道具",
+          "composition": "主次明确的静物编排",
+          "lighting": "统一柔光与接触阴影",
+          "typography": "短标题与轻辅助信息",
+          "guards": [
+            "不伪造售卖套装",
+            "不生成不存在的色款"
+          ]
+        },
+        {
+          "id": "editorial_layout",
+          "intent": "版式与细节",
+          "scene": "图形或色块承托",
+          "composition": "原图加已有细节图编排",
+          "lighting": "保持素材一致",
+          "typography": "明显字号、对齐与留白对比",
+          "guards": [
+            "细节图必须有输入来源",
+            "只有正面时不用背面设计"
+          ]
+        }
+      ],
+      "specialRoute": "真人上身需单独试衣能力、合适人物与服装素材并验收",
+      "unsupportedWithoutExtraAssets": [
+        "真实面料微距",
+        "准确真人试衣",
+        "隐藏结构",
+        "未经提供的款式"
+      ]
+    },
+    {
+      "id": "home_chair",
+      "label": "家居探索：扶手椅",
+      "evidenceStatus": "exploratory_small_sample",
+      "sources": [
+        "ikea"
+      ],
+      "observedScope": "一款扶手椅页面",
+      "productLocks": [
+        "框架",
+        "扶手/椅腿",
+        "坐垫",
+        "颜色",
+        "售卖范围",
+        "组件数"
+      ],
+      "recipes": [
+        {
+          "id": "isolated_product",
+          "intent": "准确外观",
+          "scene": "低干扰背景",
+          "composition": "完整轮廓",
+          "lighting": "匹配原图",
+          "typography": "少量信息",
+          "guards": [
+            "明确整椅还是配件"
+          ]
+        },
+        {
+          "id": "room_context",
+          "intent": "生活空间",
+          "scene": "与商品风格兼容的房间",
+          "composition": "合理透视、接触与尺度",
+          "lighting": "统一窗光与投影",
+          "typography": "空间空区放标题",
+          "guards": [
+            "道具不等于随附商品",
+            "未知尺寸不出精确尺寸示意"
+          ]
+        },
+        {
+          "id": "material_layout",
+          "intent": "结构与材质",
+          "scene": "原图和已有细节图",
+          "composition": "局部与整体对照",
+          "lighting": "忠于来源",
+          "typography": "信息清楚分组",
+          "guards": [
+            "不生成不存在的工艺",
+            "不借用其他款式细节"
+          ]
+        }
+      ]
+    }
+  ],
+  "renderRoutes": [
+    {
+      "id": "locked_product_composite",
+      "requires": [
+        "usable_product_asset",
+        "segmentation_or_alpha",
+        "background_generation",
+        "layer_renderer"
+      ],
+      "bestFor": "包装和结构保真",
+      "limits": [
+        "角度与光照受原图限制",
+        "不能直接支持复杂人物/液体交互"
+      ],
+      "fallback": "保留原图构图，只改变其可支持的环境与文字"
+    },
+    {
+      "id": "reference_edit",
+      "requires": [
+        "verified_reference_image_support",
+        "suitable_assets",
+        "fidelity_review"
+      ],
+      "bestFor": "更自由的场景和完整样稿",
+      "limits": [
+        "可能改写商品细节",
+        "必须验证当前供应商能力"
+      ],
+      "fallback": "恢复原商品层或转锁定合成"
+    },
+    {
+      "id": "specialized_tryon",
+      "requires": [
+        "verified_tryon_support",
+        "compatible_garment_asset",
+        "appropriate_person_asset",
+        "apparel_review"
+      ],
+      "bestFor": "真人上身",
+      "limits": [
+        "单独输入与验收",
+        "本应用支持状态未验证"
+      ],
+      "fallback": "平铺/挂拍"
+    }
+  ],
+  "planContract": [
+    "concept",
+    "sourceFacts",
+    "assets",
+    "composition",
+    "scene",
+    "lighting",
+    "palette",
+    "typography",
+    "productLocks",
+    "renderRoute",
+    "fallback",
+    "checks"
+  ],
+  "diversityHeuristic": {
+    "status": "uncalibrated_proposal",
+    "targetDirections": 3,
+    "axes": [
+      "scene",
+      "composition",
+      "lighting",
+      "palette",
+      "typography"
+    ],
+    "minimumMeaningfulDifferentAxesPerPair": 3,
+    "override": "用户统一风格要求及事实、素材条件优先"
+  },
+  "qualityGates": [
+    {
+      "stage": "facts",
+      "codes": [
+        "unsupported_claim",
+        "wrong_sku",
+        "wrong_bundle"
+      ],
+      "action": "移除无来源内容"
+    },
+    {
+      "stage": "fidelity",
+      "codes": [
+        "package_text_changed",
+        "structure_changed",
+        "color_changed",
+        "count_changed"
+      ],
+      "action": "恢复原素材或切换路线；进入人工核对"
+    },
+    {
+      "stage": "composition",
+      "codes": [
+        "floating_product",
+        "scale_mismatch",
+        "lighting_mismatch",
+        "text_collision"
+      ],
+      "action": "修改相关图层或方案"
+    },
+    {
+      "stage": "design",
+      "codes": [
+        "no_focal_point",
+        "weak_hierarchy",
+        "near_duplicate_concepts"
+      ],
+      "action": "调整设计变量"
+    },
+    {
+      "stage": "delivery",
+      "codes": [
+        "save_failed",
+        "download_failed"
+      ],
+      "action": "恢复已有结果，避免无意重复生成"
+    }
+  ],
+  "evaluationProposal": {
+    "executed": false,
+    "unseenSkus": 18,
+    "coreCategoryCount": 3,
+    "skusPerCategory": 6,
+    "holdoutSkusPerCategory": 2,
+    "conceptsPerSku": 3,
+    "outputsPerPipeline": 54,
+    "outputsIfBothPipelinesGenerated": 108,
+    "metrics": [
+      "首批三稿可选率及整体任务失败率",
+      "商品保真通过率",
+      "三稿有效差异率",
+      "首张可用素材时间与返工次数"
+    ],
+    "note": "小规模方向验证；不能推出商业效果或全类目泛化结论"
+  },
+  "pendingCategories": [
+    "美妆",
+    "鞋包",
+    "珠宝",
+    "大型家电",
+    "其他食品",
+    "其他数码",
+    "其他服装"
+  ],
+  "integrationStatus": "未修改应用代码；此文件不被运行中的应用读取"
+}
+

@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-09-30T10:52:51.768Z",
+  "providerId": "cmunyf8co001vbxi8zuf1i4tm",
+  "baseUrl": "https://portdan.com/v1",
+  "configuredModel": "gpt-4o-mini",
+  "status": 200,
+  "configuredModelListed": false,
+  "models": [
+    "codex-auto-review",
+    "gpt-5.5",
+    "gpt-5.6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-6-astra",
+    "gpt-6-sol",
+    "gpt-image-2",
+    "gpt-image-2.5-flare",
+    "gpt-image-2.5-sunburst"
+  ]
+}

@@ -1,0 +1,5 @@
+<li>代码版本：e534ba46a7c18522d7439ca29f7bd424bc780042。检查范围：server/providers.mjs、public/quick-images.js、server/worker.mjs、db/schema.ts、public/badcase.js。</li>
+<li>素材版本：个人项目/素材目录，70 张图片；评测输入 16 张，哈希记录于附件。</li>
+<li>方法参考：《产品指标到 Badcase》录音分析及相关课程资料。指标口径、评分锚点与用例为本项目制定。</li>
+<li>评测版本：数据集 V0.1；评分规则 V0.1。模型、输入、候选数量、策略、版式或评分规则变更均记录独立版本。</li>
+<li>待完成项：商品事实确认、调用预算、阶段日志补充、逐图反馈历史、真实评测、周度统计及回归结果。</li>

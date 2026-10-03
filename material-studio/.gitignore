@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.dev.vars
+.local/
+.sites-runtime/
+*.log
+
+.impeccable/review/

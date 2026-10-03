@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="920" viewBox="0 0 1680 920">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 4 L0 8 z"/></marker></defs>
+<rect x="0" y="0" width="1680" height="920" fill="#F5F1EE"/>
+<text x="64" y="74" font-size="40" font-weight="700" fill="#1E2421"><tspan x="64" dy="0">从创作需求到有效采用</tspan></text>
+<text x="64" y="124" font-size="24" font-weight="400" fill="#63716A"><tspan x="64" dy="0">北极星衡量用户获得的结果，质量、效率与成本解释结果如何形成</tspan></text>
+<rect x="370" y="180" width="940" height="150" rx="20" fill="#E0EDE6"/>
+<text x="398" y="228" font-size="29" font-weight="700" fill="#08754C"><tspan x="398" dy="0">每周有效采用创作需求数</tspan></text>
+<text x="398" y="275" font-size="24" font-weight="400" fill="#1E2421"><tspan x="398" dy="0">本周首次采用 · 至少一张仍被采用 · 按 task_id 去重</tspan></text>
+<polyline points="840,330 840,380 295,380 295,425" stroke="#08754C" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<polyline points="840,330 840,380 840,380 840,425" stroke="#08754C" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<polyline points="840,330 840,380 1385,380 1385,425" stroke="#08754C" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<rect x="64" y="426" width="470" height="206" rx="20" fill="#FFFFFF"/>
+<text x="92" y="474" font-size="29" font-weight="700" fill="#08754C"><tspan x="92" dy="0">有需求进入</tspan></text>
+<text x="92" y="521" font-size="24" font-weight="400" fill="#1E2421"><tspan x="92" dy="0">有效创作需求数</tspan><tspan x="92" dy="36.0">上传完成率 · 受理转化率</tspan><tspan x="92" dy="36.0">正式用户与内部评测分开</tspan></text>
+<rect x="606" y="426" width="470" height="206" rx="20" fill="#FFFFFF"/>
+<text x="634" y="474" font-size="29" font-weight="700" fill="#08754C"><tspan x="634" dy="0">产出可选择的方案</tspan></text>
+<text x="634" y="521" font-size="24" font-weight="400" fill="#1E2421"><tspan x="634" dy="0">完整交付率 · 首轮可采用率</tspan><tspan x="634" dy="36.0">商品事实与要求达标</tspan><tspan x="634" dy="36.0">三方向视觉差异达标</tspan></text>
+<rect x="1148" y="426" width="468" height="206" rx="20" fill="#FFFFFF"/>
+<text x="1176" y="474" font-size="29" font-weight="700" fill="#08754C"><tspan x="1176" dy="0">用户确认采用</tspan></text>
+<text x="1176" y="521" font-size="24" font-weight="400" fill="#1E2421"><tspan x="1176" dy="0">逐图采用 / 拒绝 / 撤销</tspan><tspan x="1176" dy="36.0">关联图片与版本</tspan><tspan x="1176" dy="36.0">重复生成不重复计需求</tspan></text>
+<rect x="64" y="694" width="752" height="158" rx="20" fill="#E0EDE6"/>
+<text x="92" y="742" font-size="29" font-weight="700" fill="#08754C"><tspan x="92" dy="0">效率与成本约束</tspan></text>
+<text x="92" y="789" font-size="24" font-weight="400" fill="#1E2421"><tspan x="92" dy="0">首次展示耗时 · 人工修改时长</tspan><tspan x="92" dy="36.0">实际账单成本 / 采用需求</tspan></text>
+<rect x="864" y="694" width="752" height="158" rx="20" fill="#E0EDE6"/>
+<text x="892" y="742" font-size="29" font-weight="700" fill="#08754C"><tspan x="892" dy="0">质量保护</tspan></text>
+<text x="892" y="789" font-size="24" font-weight="400" fill="#1E2421"><tspan x="892" dy="0">商品 / 需求 / 交付硬门槛</tspan><tspan x="892" dy="36.0">构图 · 风格 · 融合 · 文字</tspan></text>
+</svg>

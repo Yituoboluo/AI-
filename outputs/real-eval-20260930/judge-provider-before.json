@@ -1,0 +1,8 @@
+{
+  "id": "cmunyf8co001vbxi8zuf1i4tm",
+  "name": "默认评估模型",
+  "providerType": "openai_compatible",
+  "baseUrl": "https://portdan.com/keys",
+  "defaultModel": "gpt-4o-mini",
+  "enabled": true
+}

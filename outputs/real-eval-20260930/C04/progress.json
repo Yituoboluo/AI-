@@ -1,0 +1,954 @@
+{
+  "case_id": "C04",
+  "name": "固定文案与三件套",
+  "source_case_ids": "M004,M012",
+  "batch_id": "real-eval-20260930-v1",
+  "is_simulated": false,
+  "environment": "evaluation",
+  "started_at": "2026-09-30T09:58:54.766Z",
+  "product_commit": "487a7006e357277fc08e345c4dcbf77cd6955011",
+  "scope": "本机产品真实模型调用；不是线上用户行为或投放数据",
+  "input_sha256": "261a5971bf7203d3fd72caa882d720dfae92d2980a34e0e056a30ac7e595bb05",
+  "settings": {
+    "visualVersion": 2,
+    "conceptCount": 3,
+    "category": "auto",
+    "direction": "auto",
+    "ratio": "square",
+    "customBackground": false,
+    "backgroundPrompt": "",
+    "customCopy": true,
+    "title": "周末好物",
+    "subtitle": "",
+    "customLayout": false,
+    "layout": "center"
+  },
+  "expectation": "标题逐字为周末好物；保留 3 袋不同口味。",
+  "mapping": "基于真实三袋图替代模拟 100g×3。",
+  "automatic_paid_retries": 0,
+  "attempts": [
+    {
+      "stage": "prepare_product",
+      "at": "2026-09-30T09:58:57.138Z",
+      "segmentation": "automatic",
+      "fallback": false,
+      "error": null,
+      "duration_ms": 2077
+    },
+    {
+      "stage": "save_project",
+      "at": "2026-09-30T09:58:57.336Z",
+      "http_status": 200,
+      "duration_ms": 197,
+      "data": {
+        "project": {
+          "id": "real-eval-20260930-v1-C04",
+          "name": "C04真实评测",
+          "createdAt": "2026-09-30T09:58:57.325Z",
+          "updatedAt": "2026-09-30T09:58:57.325Z",
+          "serverVersion": 1,
+          "thumbnail": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/66d9431717c032b1e74d35bc8cd40720012767fa215bde83d9853915628c9594.png",
+          "deletedAt": null,
+          "demoRetired": false,
+          "draft": {
+            "creationMode": "quick",
+            "quick": {
+              "inputId": "real-eval-20260930-v1-C04-input",
+              "settings": {
+                "visualVersion": 2,
+                "conceptCount": 3,
+                "category": "auto",
+                "direction": "auto",
+                "ratio": "square",
+                "customBackground": false,
+                "backgroundPrompt": "",
+                "customCopy": true,
+                "title": "周末好物",
+                "subtitle": "",
+                "customLayout": false,
+                "layout": "center"
+              },
+              "segmentation": "automatic",
+              "originalImageData": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/2085edf714c22de805b4fd6686daebdc1a2cba0bb3908133c83adbce9751eb8c.png"
+            },
+            "productName": "",
+            "sellingPoint": "",
+            "campaign": "C04真实评测",
+            "headline": "",
+            "price": "",
+            "originalPrice": "",
+            "startDate": "",
+            "endDate": "",
+            "imageName": "吸吸袋白底.png",
+            "background": "white",
+            "template": "airy",
+            "size": "square",
+            "revision": 1,
+            "approvedRevision": null,
+            "generated": false,
+            "isExample": false,
+            "submitted": false,
+            "everApproved": false,
+            "exportedRevision": null,
+            "candidate": -1,
+            "copySource": "preset",
+            "backgroundSource": "preset",
+            "copyJobId": null,
+            "backgroundJobId": null,
+            "candidates": [],
+            "history": [],
+            "imageData": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/66d9431717c032b1e74d35bc8cd40720012767fa215bde83d9853915628c9594.png",
+            "backgroundData": null
+          },
+          "cloud": true
+        }
+      }
+    },
+    {
+      "stage": "cutout_telemetry",
+      "at": "2026-09-30T09:58:57.354Z",
+      "http_status": 200,
+      "duration_ms": 15,
+      "data": {
+        "saved": true,
+        "jobId": null
+      }
+    },
+    {
+      "stage": "create_job",
+      "at": "2026-09-30T09:58:57.374Z",
+      "http_status": 201,
+      "duration_ms": 18,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C04-job",
+          "projectId": "real-eval-20260930-v1-C04",
+          "taskId": "task_4186b9880bfe7e0c0a75963f7e3e4fb824fde4e2fbbef1ace7fcff14bef9789d",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C04",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 0,
+          "progress": null,
+          "stage": null,
+          "strategySource": null,
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "queued",
+          "createdAt": "2026-09-30T09:58:57.365Z",
+          "startedAt": null,
+          "finishedAt": null,
+          "result": null,
+          "canRecover": false,
+          "error": null,
+          "usage": null,
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "run_direction_0",
+      "at": "2026-09-30T09:59:37.255Z",
+      "http_status": 200,
+      "duration_ms": 39879,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C04-job",
+          "projectId": "real-eval-20260930-v1-C04",
+          "taskId": "task_4186b9880bfe7e0c0a75963f7e3e4fb824fde4e2fbbef1ace7fcff14bef9789d",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C04",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 1,
+          "progress": {
+            "completed": 1,
+            "total": 3,
+            "active": 1
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "queued",
+          "createdAt": "2026-09-30T09:58:57.365Z",
+          "startedAt": "2026-09-30T09:58:57.395Z",
+          "finishedAt": null,
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#2A9D8F"
+                  },
+                  "title": "周末好物",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐托盘上摆放三袋酸奶，旁置新鲜蓝莓、草莓与樱桃，背景为亚麻布与浅陶碗，自然光洒落。。柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+                  "lighting": "柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#E6F0F2"
+                  },
+                  "title": "周末好物",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质。纯白石板台面平铺三袋酸奶，袋口微开露出乳白质地，散落几粒冻干果粒与薄荷叶，极简构图。",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#426A73"
+                  },
+                  "title": "周末好物",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。前侧45°硬光制造清晰轮廓光，背景渐变暗调强化图形感。",
+                  "lighting": "前侧45°硬光制造清晰轮廓光，背景渐变暗调强化图形感。",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "周末好物",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐托盘上摆放三袋酸奶，旁置新鲜蓝莓、草莓与樱桃，背景为亚麻布与浅陶碗，自然光洒落。。柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/66d9431717c032b1e74d35bc8cd40720012767fa215bde83d9853915628c9594.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/b9be4111fbed6b718d7d0882b62d1c870637fd9030140b42c9cf4a898f5a0b75.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/b9be4111fbed6b718d7d0882b62d1c870637fd9030140b42c9cf4a898f5a0b75.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 1,
+            "compositions": [],
+            "compositionVersion": 0
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 327,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 1,
+            "images": 1,
+            "confirmedConcepts": [
+              "scene"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "run_direction_1",
+      "at": "2026-09-30T10:00:37.381Z",
+      "http_status": 200,
+      "duration_ms": 60124,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C04-job",
+          "projectId": "real-eval-20260930-v1-C04",
+          "taskId": "task_4186b9880bfe7e0c0a75963f7e3e4fb824fde4e2fbbef1ace7fcff14bef9789d",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C04",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 2,
+          "progress": {
+            "completed": 2,
+            "total": 3,
+            "active": 2
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "queued",
+          "createdAt": "2026-09-30T09:58:57.365Z",
+          "startedAt": "2026-09-30T09:59:37.275Z",
+          "finishedAt": null,
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#2A9D8F"
+                  },
+                  "title": "周末好物",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐托盘上摆放三袋酸奶，旁置新鲜蓝莓、草莓与樱桃，背景为亚麻布与浅陶碗，自然光洒落。。柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+                  "lighting": "柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#E6F0F2"
+                  },
+                  "title": "周末好物",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质。纯白石板台面平铺三袋酸奶，袋口微开露出乳白质地，散落几粒冻干果粒与薄荷叶，极简构图。",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#426A73"
+                  },
+                  "title": "周末好物",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。前侧45°硬光制造清晰轮廓光，背景渐变暗调强化图形感。",
+                  "lighting": "前侧45°硬光制造清晰轮廓光，背景渐变暗调强化图形感。",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "周末好物",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐托盘上摆放三袋酸奶，旁置新鲜蓝莓、草莓与樱桃，背景为亚麻布与浅陶碗，自然光洒落。。柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/66d9431717c032b1e74d35bc8cd40720012767fa215bde83d9853915628c9594.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/b9be4111fbed6b718d7d0882b62d1c870637fd9030140b42c9cf4a898f5a0b75.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/b9be4111fbed6b718d7d0882b62d1c870637fd9030140b42c9cf4a898f5a0b75.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "studio",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/d0c5537120f6bdfcbd9f2a02c669697b0e521cca456ce51a11f67b389dee06c0.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 2,
+            "compositions": [],
+            "compositionVersion": 0
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 327,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 2,
+            "images": 2,
+            "confirmedConcepts": [
+              "scene",
+              "studio"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "run_direction_2",
+      "at": "2026-09-30T10:01:03.851Z",
+      "http_status": 200,
+      "duration_ms": 26468,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C04-job",
+          "projectId": "real-eval-20260930-v1-C04",
+          "taskId": "task_4186b9880bfe7e0c0a75963f7e3e4fb824fde4e2fbbef1ace7fcff14bef9789d",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C04",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 3,
+          "progress": {
+            "completed": 3,
+            "total": 3,
+            "active": 3
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "succeeded",
+          "createdAt": "2026-09-30T09:58:57.365Z",
+          "startedAt": "2026-09-30T10:00:37.399Z",
+          "finishedAt": "2026-09-30T10:01:03.836Z",
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#2A9D8F"
+                  },
+                  "title": "周末好物",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐托盘上摆放三袋酸奶，旁置新鲜蓝莓、草莓与樱桃，背景为亚麻布与浅陶碗，自然光洒落。。柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+                  "lighting": "柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#E6F0F2"
+                  },
+                  "title": "周末好物",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质。纯白石板台面平铺三袋酸奶，袋口微开露出乳白质地，散落几粒冻干果粒与薄荷叶，极简构图。",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#426A73"
+                  },
+                  "title": "周末好物",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。前侧45°硬光制造清晰轮廓光，背景渐变暗调强化图形感。",
+                  "lighting": "前侧45°硬光制造清晰轮廓光，背景渐变暗调强化图形感。",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "周末好物",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐托盘上摆放三袋酸奶，旁置新鲜蓝莓、草莓与樱桃，背景为亚麻布与浅陶碗，自然光洒落。。柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/66d9431717c032b1e74d35bc8cd40720012767fa215bde83d9853915628c9594.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/b9be4111fbed6b718d7d0882b62d1c870637fd9030140b42c9cf4a898f5a0b75.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/b9be4111fbed6b718d7d0882b62d1c870637fd9030140b42c9cf4a898f5a0b75.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "studio",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/d0c5537120f6bdfcbd9f2a02c669697b0e521cca456ce51a11f67b389dee06c0.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "graphic",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/42e78567e35d9ad5c674bbca5d39998080a58c9991377005b499692d8eb3f492.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 3,
+            "compositions": [],
+            "compositionVersion": 0
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 327,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 3,
+            "images": 3,
+            "confirmedConcepts": [
+              "scene",
+              "studio",
+              "graphic"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "compose_and_save",
+      "at": "2026-09-30T10:01:04.883Z",
+      "http_status": 200,
+      "duration_ms": 626,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C04-job",
+          "projectId": "real-eval-20260930-v1-C04",
+          "taskId": "task_4186b9880bfe7e0c0a75963f7e3e4fb824fde4e2fbbef1ace7fcff14bef9789d",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C04",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 3,
+          "progress": {
+            "completed": 3,
+            "total": 3,
+            "active": 3
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "succeeded",
+          "createdAt": "2026-09-30T09:58:57.365Z",
+          "startedAt": "2026-09-30T10:00:37.399Z",
+          "finishedAt": "2026-09-30T10:01:03.836Z",
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#2A9D8F"
+                  },
+                  "title": "周末好物",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐托盘上摆放三袋酸奶，旁置新鲜蓝莓、草莓与樱桃，背景为亚麻布与浅陶碗，自然光洒落。。柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+                  "lighting": "柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#E6F0F2"
+                  },
+                  "title": "周末好物",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质。纯白石板台面平铺三袋酸奶，袋口微开露出乳白质地，散落几粒冻干果粒与薄荷叶，极简构图。",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#426A73"
+                  },
+                  "title": "周末好物",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。前侧45°硬光制造清晰轮廓光，背景渐变暗调强化图形感。",
+                  "lighting": "前侧45°硬光制造清晰轮廓光，背景渐变暗调强化图形感。",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "周末好物",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐托盘上摆放三袋酸奶，旁置新鲜蓝莓、草莓与樱桃，背景为亚麻布与浅陶碗，自然光洒落。。柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/66d9431717c032b1e74d35bc8cd40720012767fa215bde83d9853915628c9594.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/b9be4111fbed6b718d7d0882b62d1c870637fd9030140b42c9cf4a898f5a0b75.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/b9be4111fbed6b718d7d0882b62d1c870637fd9030140b42c9cf4a898f5a0b75.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "studio",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/d0c5537120f6bdfcbd9f2a02c669697b0e521cca456ce51a11f67b389dee06c0.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "graphic",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/42e78567e35d9ad5c674bbca5d39998080a58c9991377005b499692d8eb3f492.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 3,
+            "compositions": [
+              {
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/d807af5e133d3133e19e7fbfbf63c700ceef59dbb97f95b6f4305c45c026390b.png",
+                "title": "周末好物",
+                "subtitle": "",
+                "layout": "right",
+                "conceptId": "scene",
+                "name": "日常食光",
+                "assetId": "asset_real-eval-20260930-v1-C04-job_v1_0"
+              },
+              {
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/07839202b63840a2027f7e66bc34d96a014cdc51a49f07df7919cfbc9ea62bda.png",
+                "title": "周末好物",
+                "subtitle": "",
+                "layout": "center",
+                "conceptId": "studio",
+                "name": "包装质感",
+                "assetId": "asset_real-eval-20260930-v1-C04-job_v1_1"
+              },
+              {
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/f2e5052fea287f4c1c252d7abdfb36c233f995d2754cd2e3cec2a7464ae69d70.png",
+                "title": "周末好物",
+                "subtitle": "",
+                "layout": "left",
+                "conceptId": "graphic",
+                "name": "色彩灵感",
+                "assetId": "asset_real-eval-20260930-v1-C04-job_v1_2"
+              }
+            ],
+            "compositionVersion": 1
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 327,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 3,
+            "images": 3,
+            "confirmedConcepts": [
+              "scene",
+              "studio",
+              "graphic"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    }
+  ],
+  "rule_checks": [],
+  "visual_review_status": "not_run",
+  "assets": [],
+  "cutout": {
+    "segmentation": "automatic",
+    "fallback": false,
+    "error": null,
+    "duration_ms": 2077
+  },
+  "project_id": "real-eval-20260930-v1-C04",
+  "job_id": "real-eval-20260930-v1-C04-job",
+  "actual_plan": {
+    "visualVersion": 2,
+    "rulesVersion": "category-0.2",
+    "category": "food",
+    "categorySource": "visual",
+    "productName": "商品创意",
+    "ratio": "square",
+    "lockedLayout": false,
+    "strategySource": "model",
+    "concepts": [
+      {
+        "id": "scene",
+        "name": "日常食光",
+        "intent": "生活场景",
+        "category": "food",
+        "layout": "right",
+        "font": "serif",
+        "theme": "warm",
+        "palette": {
+          "background": "#E9DBC8",
+          "text": "#443227",
+          "accent": "#2A9D8F"
+        },
+        "title": "周末好物",
+        "subtitle": "",
+        "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐托盘上摆放三袋酸奶，旁置新鲜蓝莓、草莓与樱桃，背景为亚麻布与浅陶碗，自然光洒落。。柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+        "lighting": "柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+        "ratio": "square",
+        "status": "planned"
+      },
+      {
+        "id": "studio",
+        "name": "包装质感",
+        "intent": "质感静物",
+        "category": "food",
+        "layout": "center",
+        "font": "sans",
+        "theme": "dark",
+        "palette": {
+          "background": "#222A32",
+          "text": "#FFF6E9",
+          "accent": "#E6F0F2"
+        },
+        "title": "周末好物",
+        "subtitle": "",
+        "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质。纯白石板台面平铺三袋酸奶，袋口微开露出乳白质地，散落几粒冻干果粒与薄荷叶，极简构图。",
+        "lighting": "匹配商品原图的方向与软硬关系",
+        "ratio": "square",
+        "status": "planned"
+      },
+      {
+        "id": "graphic",
+        "name": "色彩灵感",
+        "intent": "图形海报",
+        "category": "food",
+        "layout": "left",
+        "font": "display",
+        "theme": "fresh",
+        "palette": {
+          "background": "#D7E5E7",
+          "text": "#203B43",
+          "accent": "#426A73"
+        },
+        "title": "周末好物",
+        "subtitle": "",
+        "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。前侧45°硬光制造清晰轮廓光，背景渐变暗调强化图形感。",
+        "lighting": "前侧45°硬光制造清晰轮廓光，背景渐变暗调强化图形感。",
+        "ratio": "square",
+        "status": "planned"
+      }
+    ],
+    "title": "周末好物",
+    "subtitle": "",
+    "layout": "right",
+    "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐托盘上摆放三袋酸奶，旁置新鲜蓝莓、草莓与樱桃，背景为亚麻布与浅陶碗，自然光洒落。。柔和侧逆光，模拟晨光，高光在袋体顶部与水果表面形成温润反光。",
+    "productLocks": [],
+    "renderRoute": "reference_scene_edit",
+    "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/66d9431717c032b1e74d35bc8cd40720012767fa215bde83d9853915628c9594.png",
+    "referenceConstraints": [
+      "原商品轮廓",
+      "包装与标识",
+      "可见颜色",
+      "部件与数量"
+    ]
+  },
+  "usage": {
+    "visionInputTokens": 976,
+    "visionOutputTokens": 327,
+    "visionModel": "qwen3-vl-plus",
+    "visionPlanSource": "model",
+    "imageCalls": 3,
+    "images": 3,
+    "confirmedConcepts": [
+      "scene",
+      "studio",
+      "graphic"
+    ]
+  },
+  "model": "gpt-image-2.5-flare【1k快速1毛】",
+  "provider": "Portdan",
+  "generation_status": "succeeded",
+  "generation_error": null,
+  "concept_errors": [],
+  "composition_ms": 404
+}

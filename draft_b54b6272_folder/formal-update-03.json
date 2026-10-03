@@ -1,0 +1,22 @@
+{
+  "ok": false,
+  "identity": "user",
+  "data": {
+    "document": {
+      "revision_id": 10,
+      "url": "https://my.feishu.cn/docx/QVBndk9egoGTKZx9WGJcIb2bnic"
+    },
+    "result": "failed",
+    "warnings": [
+      "degrade_code=1002,msg=Invalid block range: an intermediate sibling has no block ID. Choose a range whose endpoints and every intermediate sibling have block IDs"
+    ]
+  },
+  "_notice": {
+    "update": {
+      "command": "lark-cli update",
+      "current": "1.0.96",
+      "latest": "1.0.97",
+      "message": "lark-cli 1.0.97 available, current 1.0.96, run: lark-cli update"
+    }
+  }
+}

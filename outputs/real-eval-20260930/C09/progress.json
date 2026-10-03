@@ -1,0 +1,954 @@
+{
+  "case_id": "C09",
+  "name": "未填名称规格的自动策略",
+  "source_case_ids": "M017",
+  "batch_id": "real-eval-20260930-v1",
+  "is_simulated": false,
+  "environment": "evaluation",
+  "started_at": "2026-09-30T10:03:21.736Z",
+  "product_commit": "487a7006e357277fc08e345c4dcbf77cd6955011",
+  "scope": "本机产品真实模型调用；不是线上用户行为或投放数据",
+  "input_sha256": "a121108ef818adb05e6cda43bba4e42c04119aea4bf2bc427ac4777454782a86",
+  "settings": {
+    "visualVersion": 2,
+    "conceptCount": 3,
+    "category": "auto",
+    "direction": "auto",
+    "ratio": "square",
+    "customBackground": false,
+    "backgroundPrompt": "",
+    "customCopy": false,
+    "title": "",
+    "subtitle": "",
+    "customLayout": false,
+    "layout": "center"
+  },
+  "expectation": "仅凭图片生成通用视觉；不得编造未提供的营销事实。",
+  "mapping": "MOCK 需补资料分支不适用于当前仅上传图的交互；记录为接口适配，不宣称验证了澄清交互。",
+  "automatic_paid_retries": 0,
+  "attempts": [
+    {
+      "stage": "prepare_product",
+      "at": "2026-09-30T10:03:24.120Z",
+      "segmentation": "automatic",
+      "fallback": false,
+      "error": null,
+      "duration_ms": 2008
+    },
+    {
+      "stage": "save_project",
+      "at": "2026-09-30T10:03:24.230Z",
+      "http_status": 200,
+      "duration_ms": 108,
+      "data": {
+        "project": {
+          "id": "real-eval-20260930-v1-C09",
+          "name": "C09真实评测",
+          "createdAt": "2026-09-30T10:03:24.221Z",
+          "updatedAt": "2026-09-30T10:03:24.221Z",
+          "serverVersion": 1,
+          "thumbnail": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+          "deletedAt": null,
+          "demoRetired": false,
+          "draft": {
+            "creationMode": "quick",
+            "quick": {
+              "inputId": "real-eval-20260930-v1-C09-input",
+              "settings": {
+                "visualVersion": 2,
+                "conceptCount": 3,
+                "category": "auto",
+                "direction": "auto",
+                "ratio": "square",
+                "customBackground": false,
+                "backgroundPrompt": "",
+                "customCopy": false,
+                "title": "",
+                "subtitle": "",
+                "customLayout": false,
+                "layout": "center"
+              },
+              "segmentation": "automatic",
+              "originalImageData": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/757511c1ad167e1beab4372341e0fc968bbff24e7da769b85119e441f7dff0a1.png"
+            },
+            "productName": "",
+            "sellingPoint": "",
+            "campaign": "C09真实评测",
+            "headline": "",
+            "price": "",
+            "originalPrice": "",
+            "startDate": "",
+            "endDate": "",
+            "imageName": "未标题-1.png",
+            "background": "white",
+            "template": "airy",
+            "size": "square",
+            "revision": 1,
+            "approvedRevision": null,
+            "generated": false,
+            "isExample": false,
+            "submitted": false,
+            "everApproved": false,
+            "exportedRevision": null,
+            "candidate": -1,
+            "copySource": "preset",
+            "backgroundSource": "preset",
+            "copyJobId": null,
+            "backgroundJobId": null,
+            "candidates": [],
+            "history": [],
+            "imageData": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+            "backgroundData": null
+          },
+          "cloud": true
+        }
+      }
+    },
+    {
+      "stage": "cutout_telemetry",
+      "at": "2026-09-30T10:03:24.257Z",
+      "http_status": 200,
+      "duration_ms": 25,
+      "data": {
+        "saved": true,
+        "jobId": null
+      }
+    },
+    {
+      "stage": "create_job",
+      "at": "2026-09-30T10:03:24.276Z",
+      "http_status": 201,
+      "duration_ms": 17,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C09-job",
+          "projectId": "real-eval-20260930-v1-C09",
+          "taskId": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C09",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 0,
+          "progress": null,
+          "stage": null,
+          "strategySource": null,
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "queued",
+          "createdAt": "2026-09-30T10:03:24.267Z",
+          "startedAt": null,
+          "finishedAt": null,
+          "result": null,
+          "canRecover": false,
+          "error": null,
+          "usage": null,
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "run_direction_0",
+      "at": "2026-09-30T10:03:57.796Z",
+      "http_status": 200,
+      "duration_ms": 33519,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C09-job",
+          "projectId": "real-eval-20260930-v1-C09",
+          "taskId": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C09",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 1,
+          "progress": {
+            "completed": 1,
+            "total": 3,
+            "active": 1
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "queued",
+          "createdAt": "2026-09-30T10:03:24.267Z",
+          "startedAt": "2026-09-30T10:03:24.280Z",
+          "finishedAt": null,
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#F8C7C7"
+                  },
+                  "title": "晨光微醺，果香与谷物温柔相拥",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#E6D5C8"
+                  },
+                  "title": "素净台面，自然本味悄然浮现",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#FF9A9E"
+                  },
+                  "title": "粉带流转，清新韵律跃然纸上",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯平光无阴影，强调图形对比与色彩层次",
+                  "lighting": "纯平光无阴影，强调图形对比与色彩层次",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "晨光微醺，果香与谷物温柔相拥",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 1,
+            "compositions": [],
+            "compositionVersion": 0
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 321,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 1,
+            "images": 1,
+            "confirmedConcepts": [
+              "scene"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "run_direction_1",
+      "at": "2026-09-30T10:05:02.326Z",
+      "http_status": 200,
+      "duration_ms": 64528,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C09-job",
+          "projectId": "real-eval-20260930-v1-C09",
+          "taskId": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C09",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 2,
+          "progress": {
+            "completed": 2,
+            "total": 3,
+            "active": 2
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "queued",
+          "createdAt": "2026-09-30T10:03:24.267Z",
+          "startedAt": "2026-09-30T10:03:57.805Z",
+          "finishedAt": null,
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#F8C7C7"
+                  },
+                  "title": "晨光微醺，果香与谷物温柔相拥",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#E6D5C8"
+                  },
+                  "title": "素净台面，自然本味悄然浮现",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#FF9A9E"
+                  },
+                  "title": "粉带流转，清新韵律跃然纸上",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯平光无阴影，强调图形对比与色彩层次",
+                  "lighting": "纯平光无阴影，强调图形对比与色彩层次",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "晨光微醺，果香与谷物温柔相拥",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "studio",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/4c2f1f3c17e17918952872bde0e19c4088cf748a1ad940a35139621577105673.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 2,
+            "compositions": [],
+            "compositionVersion": 0
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 321,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 2,
+            "images": 2,
+            "confirmedConcepts": [
+              "scene",
+              "studio"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "run_direction_2",
+      "at": "2026-09-30T10:05:26.149Z",
+      "http_status": 200,
+      "duration_ms": 23821,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C09-job",
+          "projectId": "real-eval-20260930-v1-C09",
+          "taskId": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C09",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 3,
+          "progress": {
+            "completed": 3,
+            "total": 3,
+            "active": 3
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "succeeded",
+          "createdAt": "2026-09-30T10:03:24.267Z",
+          "startedAt": "2026-09-30T10:05:02.337Z",
+          "finishedAt": "2026-09-30T10:05:26.135Z",
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#F8C7C7"
+                  },
+                  "title": "晨光微醺，果香与谷物温柔相拥",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#E6D5C8"
+                  },
+                  "title": "素净台面，自然本味悄然浮现",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#FF9A9E"
+                  },
+                  "title": "粉带流转，清新韵律跃然纸上",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯平光无阴影，强调图形对比与色彩层次",
+                  "lighting": "纯平光无阴影，强调图形对比与色彩层次",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "晨光微醺，果香与谷物温柔相拥",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "studio",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/4c2f1f3c17e17918952872bde0e19c4088cf748a1ad940a35139621577105673.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "graphic",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/e0af5e9060593cb32096fd3e7258d0c1fc539997fd43e539dfc6d5072854b6c4.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 3,
+            "compositions": [],
+            "compositionVersion": 0
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 321,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 3,
+            "images": 3,
+            "confirmedConcepts": [
+              "scene",
+              "studio",
+              "graphic"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "compose_and_save",
+      "at": "2026-09-30T10:05:27.262Z",
+      "http_status": 200,
+      "duration_ms": 694,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C09-job",
+          "projectId": "real-eval-20260930-v1-C09",
+          "taskId": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C09",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 3,
+          "progress": {
+            "completed": 3,
+            "total": 3,
+            "active": 3
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "succeeded",
+          "createdAt": "2026-09-30T10:03:24.267Z",
+          "startedAt": "2026-09-30T10:05:02.337Z",
+          "finishedAt": "2026-09-30T10:05:26.135Z",
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#F8C7C7"
+                  },
+                  "title": "晨光微醺，果香与谷物温柔相拥",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#E6D5C8"
+                  },
+                  "title": "素净台面，自然本味悄然浮现",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#FF9A9E"
+                  },
+                  "title": "粉带流转，清新韵律跃然纸上",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯平光无阴影，强调图形对比与色彩层次",
+                  "lighting": "纯平光无阴影，强调图形对比与色彩层次",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "晨光微醺，果香与谷物温柔相拥",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "studio",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/4c2f1f3c17e17918952872bde0e19c4088cf748a1ad940a35139621577105673.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "graphic",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/e0af5e9060593cb32096fd3e7258d0c1fc539997fd43e539dfc6d5072854b6c4.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 3,
+            "compositions": [
+              {
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/9a83f536e56ae65420d6fe5aef6501dcd95971d4f58b78ca26cf0c6a308fe69b.png",
+                "title": "晨光微醺，果香与谷物温柔相拥",
+                "subtitle": "",
+                "layout": "right",
+                "conceptId": "scene",
+                "name": "日常食光",
+                "assetId": "asset_real-eval-20260930-v1-C09-job_v1_0"
+              },
+              {
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/ffe037d59540c4adc8875897a1b4007b2e28f8fce7f70818e05eca7f3d612dd5.png",
+                "title": "素净台面，自然本味悄然浮现",
+                "subtitle": "",
+                "layout": "center",
+                "conceptId": "studio",
+                "name": "包装质感",
+                "assetId": "asset_real-eval-20260930-v1-C09-job_v1_1"
+              },
+              {
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/fd150aef90331f6019c5ad458dc64d3fcd91efe2e1e99f1704133f6203a8f97b.png",
+                "title": "粉带流转，清新韵律跃然纸上",
+                "subtitle": "",
+                "layout": "left",
+                "conceptId": "graphic",
+                "name": "色彩灵感",
+                "assetId": "asset_real-eval-20260930-v1-C09-job_v1_2"
+              }
+            ],
+            "compositionVersion": 1
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 321,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 3,
+            "images": 3,
+            "confirmedConcepts": [
+              "scene",
+              "studio",
+              "graphic"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    }
+  ],
+  "rule_checks": [],
+  "visual_review_status": "not_run",
+  "assets": [],
+  "cutout": {
+    "segmentation": "automatic",
+    "fallback": false,
+    "error": null,
+    "duration_ms": 2008
+  },
+  "project_id": "real-eval-20260930-v1-C09",
+  "job_id": "real-eval-20260930-v1-C09-job",
+  "actual_plan": {
+    "visualVersion": 2,
+    "rulesVersion": "category-0.2",
+    "category": "food",
+    "categorySource": "visual",
+    "productName": "商品创意",
+    "ratio": "square",
+    "lockedLayout": false,
+    "strategySource": "model",
+    "concepts": [
+      {
+        "id": "scene",
+        "name": "日常食光",
+        "intent": "生活场景",
+        "category": "food",
+        "layout": "right",
+        "font": "serif",
+        "theme": "warm",
+        "palette": {
+          "background": "#E9DBC8",
+          "text": "#443227",
+          "accent": "#F8C7C7"
+        },
+        "title": "晨光微醺，果香与谷物温柔相拥",
+        "subtitle": "",
+        "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+        "lighting": "匹配商品原图的方向与软硬关系",
+        "ratio": "square",
+        "status": "planned"
+      },
+      {
+        "id": "studio",
+        "name": "包装质感",
+        "intent": "质感静物",
+        "category": "food",
+        "layout": "center",
+        "font": "sans",
+        "theme": "dark",
+        "palette": {
+          "background": "#222A32",
+          "text": "#FFF6E9",
+          "accent": "#E6D5C8"
+        },
+        "title": "素净台面，自然本味悄然浮现",
+        "subtitle": "",
+        "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质",
+        "lighting": "匹配商品原图的方向与软硬关系",
+        "ratio": "square",
+        "status": "planned"
+      },
+      {
+        "id": "graphic",
+        "name": "色彩灵感",
+        "intent": "图形海报",
+        "category": "food",
+        "layout": "left",
+        "font": "display",
+        "theme": "fresh",
+        "palette": {
+          "background": "#D7E5E7",
+          "text": "#203B43",
+          "accent": "#FF9A9E"
+        },
+        "title": "粉带流转，清新韵律跃然纸上",
+        "subtitle": "",
+        "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯平光无阴影，强调图形对比与色彩层次",
+        "lighting": "纯平光无阴影，强调图形对比与色彩层次",
+        "ratio": "square",
+        "status": "planned"
+      }
+    ],
+    "title": "晨光微醺，果香与谷物温柔相拥",
+    "subtitle": "",
+    "layout": "right",
+    "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+    "productLocks": [],
+    "renderRoute": "reference_scene_edit",
+    "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+    "referenceConstraints": [
+      "原商品轮廓",
+      "包装与标识",
+      "可见颜色",
+      "部件与数量"
+    ]
+  },
+  "usage": {
+    "visionInputTokens": 976,
+    "visionOutputTokens": 321,
+    "visionModel": "qwen3-vl-plus",
+    "visionPlanSource": "model",
+    "imageCalls": 3,
+    "images": 3,
+    "confirmedConcepts": [
+      "scene",
+      "studio",
+      "graphic"
+    ]
+  },
+  "model": "gpt-image-2.5-flare【1k快速1毛】",
+  "provider": "Portdan",
+  "generation_status": "succeeded",
+  "generation_error": null,
+  "concept_errors": [],
+  "composition_ms": 416
+}

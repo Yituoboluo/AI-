@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-03",
+  "product_commit": "487a7006e357277fc08e345c4dcbf77cd6955011",
+  "validation": {
+    "tests": "88/88 通过，0 失败（打包副本中执行 npm test）",
+    "build": "成功，28 个静态资源，5125 KB Worker，包含 D1 迁移（打包副本中执行 npm run build）"
+  },
+  "excluded": [
+    ".git/",
+    ".work/",
+    "Eval-Any-Agent-source-20260929\\Eval-Any-Agent\\.env",
+    "Eval-Any-Agent-source-20260929\\Eval-Any-Agent\\.impeccable/",
+    "Eval-Any-Agent-source-20260929\\Eval-Any-Agent\\.local/",
+    "Eval-Any-Agent-source-20260929\\Eval-Any-Agent\\.next/",
+    "Eval-Any-Agent-source-20260929\\Eval-Any-Agent\\node_modules/",
+    "Eval-Any-Agent-source-20260929\\Eval-Any-Agent\\prisma\\dev.db",
+    "draft_a3706042_folder\\__pycache__/",
+    "material-studio\\.env",
+    "material-studio\\.git/",
+    "material-studio\\.impeccable/",
+    "material-studio\\.local/",
+    "material-studio\\node_modules/",
+    "output\\打包/"
+  ],
+  "dashboard_adjusted_links": 2
+}

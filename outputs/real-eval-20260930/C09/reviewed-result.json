@@ -1,0 +1,1882 @@
+{
+  "case_id": "C09",
+  "name": "未填名称规格的自动策略",
+  "source_case_ids": "M017",
+  "batch_id": "real-eval-20260930-v1",
+  "is_simulated": false,
+  "environment": "evaluation",
+  "started_at": "2026-09-30T10:03:21.736Z",
+  "product_commit": "487a7006e357277fc08e345c4dcbf77cd6955011",
+  "scope": "本机产品真实模型调用；不是线上用户行为或投放数据",
+  "input_sha256": "a121108ef818adb05e6cda43bba4e42c04119aea4bf2bc427ac4777454782a86",
+  "settings": {
+    "visualVersion": 2,
+    "conceptCount": 3,
+    "category": "auto",
+    "direction": "auto",
+    "ratio": "square",
+    "customBackground": false,
+    "backgroundPrompt": "",
+    "customCopy": false,
+    "title": "",
+    "subtitle": "",
+    "customLayout": false,
+    "layout": "center"
+  },
+  "expectation": "仅凭图片生成通用视觉；不得编造未提供的营销事实。",
+  "mapping": "MOCK 需补资料分支不适用于当前仅上传图的交互；记录为接口适配，不宣称验证了澄清交互。",
+  "automatic_paid_retries": 0,
+  "attempts": [
+    {
+      "stage": "prepare_product",
+      "at": "2026-09-30T10:03:24.120Z",
+      "segmentation": "automatic",
+      "fallback": false,
+      "error": null,
+      "duration_ms": 2008
+    },
+    {
+      "stage": "save_project",
+      "at": "2026-09-30T10:03:24.230Z",
+      "http_status": 200,
+      "duration_ms": 108,
+      "data": {
+        "project": {
+          "id": "real-eval-20260930-v1-C09",
+          "name": "C09真实评测",
+          "createdAt": "2026-09-30T10:03:24.221Z",
+          "updatedAt": "2026-09-30T10:03:24.221Z",
+          "serverVersion": 1,
+          "thumbnail": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+          "deletedAt": null,
+          "demoRetired": false,
+          "draft": {
+            "creationMode": "quick",
+            "quick": {
+              "inputId": "real-eval-20260930-v1-C09-input",
+              "settings": {
+                "visualVersion": 2,
+                "conceptCount": 3,
+                "category": "auto",
+                "direction": "auto",
+                "ratio": "square",
+                "customBackground": false,
+                "backgroundPrompt": "",
+                "customCopy": false,
+                "title": "",
+                "subtitle": "",
+                "customLayout": false,
+                "layout": "center"
+              },
+              "segmentation": "automatic",
+              "originalImageData": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/757511c1ad167e1beab4372341e0fc968bbff24e7da769b85119e441f7dff0a1.png"
+            },
+            "productName": "",
+            "sellingPoint": "",
+            "campaign": "C09真实评测",
+            "headline": "",
+            "price": "",
+            "originalPrice": "",
+            "startDate": "",
+            "endDate": "",
+            "imageName": "未标题-1.png",
+            "background": "white",
+            "template": "airy",
+            "size": "square",
+            "revision": 1,
+            "approvedRevision": null,
+            "generated": false,
+            "isExample": false,
+            "submitted": false,
+            "everApproved": false,
+            "exportedRevision": null,
+            "candidate": -1,
+            "copySource": "preset",
+            "backgroundSource": "preset",
+            "copyJobId": null,
+            "backgroundJobId": null,
+            "candidates": [],
+            "history": [],
+            "imageData": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+            "backgroundData": null
+          },
+          "cloud": true
+        }
+      }
+    },
+    {
+      "stage": "cutout_telemetry",
+      "at": "2026-09-30T10:03:24.257Z",
+      "http_status": 200,
+      "duration_ms": 25,
+      "data": {
+        "saved": true,
+        "jobId": null
+      }
+    },
+    {
+      "stage": "create_job",
+      "at": "2026-09-30T10:03:24.276Z",
+      "http_status": 201,
+      "duration_ms": 17,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C09-job",
+          "projectId": "real-eval-20260930-v1-C09",
+          "taskId": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C09",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 0,
+          "progress": null,
+          "stage": null,
+          "strategySource": null,
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "queued",
+          "createdAt": "2026-09-30T10:03:24.267Z",
+          "startedAt": null,
+          "finishedAt": null,
+          "result": null,
+          "canRecover": false,
+          "error": null,
+          "usage": null,
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "run_direction_0",
+      "at": "2026-09-30T10:03:57.796Z",
+      "http_status": 200,
+      "duration_ms": 33519,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C09-job",
+          "projectId": "real-eval-20260930-v1-C09",
+          "taskId": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C09",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 1,
+          "progress": {
+            "completed": 1,
+            "total": 3,
+            "active": 1
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "queued",
+          "createdAt": "2026-09-30T10:03:24.267Z",
+          "startedAt": "2026-09-30T10:03:24.280Z",
+          "finishedAt": null,
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#F8C7C7"
+                  },
+                  "title": "晨光微醺，果香与谷物温柔相拥",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#E6D5C8"
+                  },
+                  "title": "素净台面，自然本味悄然浮现",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#FF9A9E"
+                  },
+                  "title": "粉带流转，清新韵律跃然纸上",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯平光无阴影，强调图形对比与色彩层次",
+                  "lighting": "纯平光无阴影，强调图形对比与色彩层次",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "晨光微醺，果香与谷物温柔相拥",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 1,
+            "compositions": [],
+            "compositionVersion": 0
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 321,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 1,
+            "images": 1,
+            "confirmedConcepts": [
+              "scene"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "run_direction_1",
+      "at": "2026-09-30T10:05:02.326Z",
+      "http_status": 200,
+      "duration_ms": 64528,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C09-job",
+          "projectId": "real-eval-20260930-v1-C09",
+          "taskId": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C09",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 2,
+          "progress": {
+            "completed": 2,
+            "total": 3,
+            "active": 2
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "queued",
+          "createdAt": "2026-09-30T10:03:24.267Z",
+          "startedAt": "2026-09-30T10:03:57.805Z",
+          "finishedAt": null,
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#F8C7C7"
+                  },
+                  "title": "晨光微醺，果香与谷物温柔相拥",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#E6D5C8"
+                  },
+                  "title": "素净台面，自然本味悄然浮现",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#FF9A9E"
+                  },
+                  "title": "粉带流转，清新韵律跃然纸上",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯平光无阴影，强调图形对比与色彩层次",
+                  "lighting": "纯平光无阴影，强调图形对比与色彩层次",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "晨光微醺，果香与谷物温柔相拥",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "studio",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/4c2f1f3c17e17918952872bde0e19c4088cf748a1ad940a35139621577105673.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 2,
+            "compositions": [],
+            "compositionVersion": 0
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 321,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 2,
+            "images": 2,
+            "confirmedConcepts": [
+              "scene",
+              "studio"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "run_direction_2",
+      "at": "2026-09-30T10:05:26.149Z",
+      "http_status": 200,
+      "duration_ms": 23821,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C09-job",
+          "projectId": "real-eval-20260930-v1-C09",
+          "taskId": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C09",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 3,
+          "progress": {
+            "completed": 3,
+            "total": 3,
+            "active": 3
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "succeeded",
+          "createdAt": "2026-09-30T10:03:24.267Z",
+          "startedAt": "2026-09-30T10:05:02.337Z",
+          "finishedAt": "2026-09-30T10:05:26.135Z",
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#F8C7C7"
+                  },
+                  "title": "晨光微醺，果香与谷物温柔相拥",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#E6D5C8"
+                  },
+                  "title": "素净台面，自然本味悄然浮现",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#FF9A9E"
+                  },
+                  "title": "粉带流转，清新韵律跃然纸上",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯平光无阴影，强调图形对比与色彩层次",
+                  "lighting": "纯平光无阴影，强调图形对比与色彩层次",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "晨光微醺，果香与谷物温柔相拥",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "studio",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/4c2f1f3c17e17918952872bde0e19c4088cf748a1ad940a35139621577105673.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "graphic",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/e0af5e9060593cb32096fd3e7258d0c1fc539997fd43e539dfc6d5072854b6c4.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 3,
+            "compositions": [],
+            "compositionVersion": 0
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 321,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 3,
+            "images": 3,
+            "confirmedConcepts": [
+              "scene",
+              "studio",
+              "graphic"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    },
+    {
+      "stage": "compose_and_save",
+      "at": "2026-09-30T10:05:27.262Z",
+      "http_status": 200,
+      "duration_ms": 694,
+      "data": {
+        "job": {
+          "id": "real-eval-20260930-v1-C09-job",
+          "projectId": "real-eval-20260930-v1-C09",
+          "taskId": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+          "parentJobId": null,
+          "attemptNo": 1,
+          "environment": "evaluation",
+          "evaluation": {
+            "batchId": "real-eval-20260930-v1",
+            "caseId": "C09",
+            "variant": "A"
+          },
+          "workflowVersion": "creative-telemetry-v1",
+          "flow": "quick",
+          "visualVersion": 2,
+          "nextStep": 3,
+          "progress": {
+            "completed": 3,
+            "total": 3,
+            "active": 3
+          },
+          "stage": null,
+          "strategySource": "model",
+          "kind": "image",
+          "sourceRevision": 1,
+          "sourceVersion": 1,
+          "provider": "Portdan",
+          "model": "gpt-image-2.5-flare【1k快速1毛】",
+          "status": "succeeded",
+          "createdAt": "2026-09-30T10:03:24.267Z",
+          "startedAt": "2026-09-30T10:05:02.337Z",
+          "finishedAt": "2026-09-30T10:05:26.135Z",
+          "result": {
+            "quick": {
+              "visualVersion": 2,
+              "rulesVersion": "category-0.2",
+              "category": "food",
+              "categorySource": "visual",
+              "productName": "商品创意",
+              "ratio": "square",
+              "lockedLayout": false,
+              "strategySource": "model",
+              "concepts": [
+                {
+                  "id": "scene",
+                  "name": "日常食光",
+                  "intent": "生活场景",
+                  "category": "food",
+                  "layout": "right",
+                  "font": "serif",
+                  "theme": "warm",
+                  "palette": {
+                    "background": "#E9DBC8",
+                    "text": "#443227",
+                    "accent": "#F8C7C7"
+                  },
+                  "title": "晨光微醺，果香与谷物温柔相拥",
+                  "subtitle": "",
+                  "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "studio",
+                  "name": "包装质感",
+                  "intent": "质感静物",
+                  "category": "food",
+                  "layout": "center",
+                  "font": "sans",
+                  "theme": "dark",
+                  "palette": {
+                    "background": "#222A32",
+                    "text": "#FFF6E9",
+                    "accent": "#E6D5C8"
+                  },
+                  "title": "素净台面，自然本味悄然浮现",
+                  "subtitle": "",
+                  "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质",
+                  "lighting": "匹配商品原图的方向与软硬关系",
+                  "ratio": "square",
+                  "status": "planned"
+                },
+                {
+                  "id": "graphic",
+                  "name": "色彩灵感",
+                  "intent": "图形海报",
+                  "category": "food",
+                  "layout": "left",
+                  "font": "display",
+                  "theme": "fresh",
+                  "palette": {
+                    "background": "#D7E5E7",
+                    "text": "#203B43",
+                    "accent": "#FF9A9E"
+                  },
+                  "title": "粉带流转，清新韵律跃然纸上",
+                  "subtitle": "",
+                  "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯平光无阴影，强调图形对比与色彩层次",
+                  "lighting": "纯平光无阴影，强调图形对比与色彩层次",
+                  "ratio": "square",
+                  "status": "planned"
+                }
+              ],
+              "title": "晨光微醺，果香与谷物温柔相拥",
+              "subtitle": "",
+              "layout": "right",
+              "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+              "productLocks": [],
+              "renderRoute": "reference_scene_edit",
+              "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+              "referenceConstraints": [
+                "原商品轮廓",
+                "包装与标识",
+                "可见颜色",
+                "部件与数量"
+              ]
+            },
+            "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+            "backgrounds": [
+              {
+                "conceptId": "scene",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/7fae9161ebb3efb375cbc45fb4c517254c32d1155b173acdda6352be6171ff35.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "studio",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/4c2f1f3c17e17918952872bde0e19c4088cf748a1ad940a35139621577105673.png",
+                "renderMode": "integrated"
+              },
+              {
+                "conceptId": "graphic",
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/e0af5e9060593cb32096fd3e7258d0c1fc539997fd43e539dfc6d5072854b6c4.png",
+                "renderMode": "integrated"
+              }
+            ],
+            "conceptErrors": [],
+            "nextStep": 3,
+            "compositions": [
+              {
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/9a83f536e56ae65420d6fe5aef6501dcd95971d4f58b78ca26cf0c6a308fe69b.png",
+                "title": "晨光微醺，果香与谷物温柔相拥",
+                "subtitle": "",
+                "layout": "right",
+                "conceptId": "scene",
+                "name": "日常食光",
+                "assetId": "asset_real-eval-20260930-v1-C09-job_v1_0"
+              },
+              {
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/ffe037d59540c4adc8875897a1b4007b2e28f8fce7f70818e05eca7f3d612dd5.png",
+                "title": "素净台面，自然本味悄然浮现",
+                "subtitle": "",
+                "layout": "center",
+                "conceptId": "studio",
+                "name": "包装质感",
+                "assetId": "asset_real-eval-20260930-v1-C09-job_v1_1"
+              },
+              {
+                "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/fd150aef90331f6019c5ad458dc64d3fcd91efe2e1e99f1704133f6203a8f97b.png",
+                "title": "粉带流转，清新韵律跃然纸上",
+                "subtitle": "",
+                "layout": "left",
+                "conceptId": "graphic",
+                "name": "色彩灵感",
+                "assetId": "asset_real-eval-20260930-v1-C09-job_v1_2"
+              }
+            ],
+            "compositionVersion": 1
+          },
+          "canRecover": false,
+          "error": null,
+          "usage": {
+            "visionInputTokens": 976,
+            "visionOutputTokens": 321,
+            "visionModel": "qwen3-vl-plus",
+            "visionPlanSource": "model",
+            "imageCalls": 3,
+            "images": 3,
+            "confirmedConcepts": [
+              "scene",
+              "studio",
+              "graphic"
+            ]
+          },
+          "feedback": null,
+          "feedbackReason": null
+        }
+      }
+    }
+  ],
+  "rule_checks": [
+    {
+      "code": "all_three_outputs_persisted",
+      "passed": true,
+      "actual": 3
+    },
+    {
+      "code": "three_distinct_concept_ids",
+      "passed": true,
+      "actual": [
+        "scene",
+        "studio",
+        "graphic"
+      ]
+    },
+    {
+      "code": "output_assets_readable",
+      "passed": true
+    }
+  ],
+  "visual_review_status": "pending_visual_review",
+  "assets": [
+    {
+      "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/9a83f536e56ae65420d6fe5aef6501dcd95971d4f58b78ca26cf0c6a308fe69b.png",
+      "title": "晨光微醺，果香与谷物温柔相拥",
+      "subtitle": "",
+      "layout": "right",
+      "conceptId": "scene",
+      "name": "日常食光",
+      "assetId": "asset_real-eval-20260930-v1-C09-job_v1_0",
+      "local_path": "E:/...AAAAIIIIIAIPM/个人项目/outputs/real-eval-20260930/C09/scene.png",
+      "sha256": "9a83f536e56ae65420d6fe5aef6501dcd95971d4f58b78ca26cf0c6a308fe69b",
+      "bytes": 1939016,
+      "http_status": 200,
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/ffe037d59540c4adc8875897a1b4007b2e28f8fce7f70818e05eca7f3d612dd5.png",
+      "title": "素净台面，自然本味悄然浮现",
+      "subtitle": "",
+      "layout": "center",
+      "conceptId": "studio",
+      "name": "包装质感",
+      "assetId": "asset_real-eval-20260930-v1-C09-job_v1_1",
+      "local_path": "E:/...AAAAIIIIIAIPM/个人项目/outputs/real-eval-20260930/C09/studio.png",
+      "sha256": "ffe037d59540c4adc8875897a1b4007b2e28f8fce7f70818e05eca7f3d612dd5",
+      "bytes": 1869806,
+      "http_status": 200,
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "imageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/fd150aef90331f6019c5ad458dc64d3fcd91efe2e1e99f1704133f6203a8f97b.png",
+      "title": "粉带流转，清新韵律跃然纸上",
+      "subtitle": "",
+      "layout": "left",
+      "conceptId": "graphic",
+      "name": "色彩灵感",
+      "assetId": "asset_real-eval-20260930-v1-C09-job_v1_2",
+      "local_path": "E:/...AAAAIIIIIAIPM/个人项目/outputs/real-eval-20260930/C09/graphic.png",
+      "sha256": "fd150aef90331f6019c5ad458dc64d3fcd91efe2e1e99f1704133f6203a8f97b",
+      "bytes": 1749562,
+      "http_status": 200,
+      "width": 1080,
+      "height": 1080
+    }
+  ],
+  "cutout": {
+    "segmentation": "automatic",
+    "fallback": false,
+    "error": null,
+    "duration_ms": 2008
+  },
+  "project_id": "real-eval-20260930-v1-C09",
+  "job_id": "real-eval-20260930-v1-C09-job",
+  "actual_plan": {
+    "visualVersion": 2,
+    "rulesVersion": "category-0.2",
+    "category": "food",
+    "categorySource": "visual",
+    "productName": "商品创意",
+    "ratio": "square",
+    "lockedLayout": false,
+    "strategySource": "model",
+    "concepts": [
+      {
+        "id": "scene",
+        "name": "日常食光",
+        "intent": "生活场景",
+        "category": "food",
+        "layout": "right",
+        "font": "serif",
+        "theme": "warm",
+        "palette": {
+          "background": "#E9DBC8",
+          "text": "#443227",
+          "accent": "#F8C7C7"
+        },
+        "title": "晨光微醺，果香与谷物温柔相拥",
+        "subtitle": "",
+        "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+        "lighting": "匹配商品原图的方向与软硬关系",
+        "ratio": "square",
+        "status": "planned"
+      },
+      {
+        "id": "studio",
+        "name": "包装质感",
+        "intent": "质感静物",
+        "category": "food",
+        "layout": "center",
+        "font": "sans",
+        "theme": "dark",
+        "palette": {
+          "background": "#222A32",
+          "text": "#FFF6E9",
+          "accent": "#E6D5C8"
+        },
+        "title": "素净台面，自然本味悄然浮现",
+        "subtitle": "",
+        "backgroundPrompt": "乳白色建筑曲面和低矮展台，侧面塑形光，强调明暗层次与材质",
+        "lighting": "匹配商品原图的方向与软硬关系",
+        "ratio": "square",
+        "status": "planned"
+      },
+      {
+        "id": "graphic",
+        "name": "色彩灵感",
+        "intent": "图形海报",
+        "category": "food",
+        "layout": "left",
+        "font": "display",
+        "theme": "fresh",
+        "palette": {
+          "background": "#D7E5E7",
+          "text": "#203B43",
+          "accent": "#FF9A9E"
+        },
+        "title": "粉带流转，清新韵律跃然纸上",
+        "subtitle": "",
+        "backgroundPrompt": "从商品可见配色提取的纸张层次、宽阔色块和弧形空间，鲜明光影。纯平光无阴影，强调图形对比与色彩层次",
+        "lighting": "纯平光无阴影，强调图形对比与色彩层次",
+        "ratio": "square",
+        "status": "planned"
+      }
+    ],
+    "title": "晨光微醺，果香与谷物温柔相拥",
+    "subtitle": "",
+    "layout": "right",
+    "backgroundPrompt": "温暖木质餐桌与亚麻织物，远处少量早餐道具，侧窗晨光，真实景深。木质早餐桌一角，铺亚麻餐巾，旁置切开的鲜草莓、燕麦粒小碗与陶瓷杯，背景虚化窗景透晨光",
+    "productLocks": [],
+    "renderRoute": "reference_scene_edit",
+    "subjectImageUrl": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/8325121f34ad5b01a1f8291b7a6719a27e72cf728a27943c9338ad8308ae4d16.png",
+    "referenceConstraints": [
+      "原商品轮廓",
+      "包装与标识",
+      "可见颜色",
+      "部件与数量"
+    ]
+  },
+  "usage": {
+    "visionInputTokens": 976,
+    "visionOutputTokens": 321,
+    "visionModel": "qwen3-vl-plus",
+    "visionPlanSource": "model",
+    "imageCalls": 3,
+    "images": 3,
+    "confirmedConcepts": [
+      "scene",
+      "studio",
+      "graphic"
+    ]
+  },
+  "model": "gpt-image-2.5-flare【1k快速1毛】",
+  "provider": "Portdan",
+  "generation_status": "succeeded",
+  "generation_error": null,
+  "concept_errors": [],
+  "composition_ms": 416,
+  "product_badcases": [],
+  "stage_events": [
+    {
+      "id": "7ad60951-4dfa-4447-827b-2fc0f4e94f9c",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": null,
+      "job_id": null,
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-input",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "cutout_completed",
+      "stage": "cutout",
+      "status": "succeeded",
+      "duration_ms": 2008,
+      "source": "client",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:24.249Z",
+      "received_at": "2026-09-30T10:03:24.249Z",
+      "data": {
+        "inputId": "real-eval-20260930-v1-C09-input"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:accepted",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "generation_accepted",
+      "stage": "queue",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:24.267Z",
+      "received_at": "2026-09-30T10:03:24.267Z",
+      "data": {
+        "attemptNo": 1,
+        "parentJobId": null,
+        "workflowVersion": "creative-telemetry-v1",
+        "model": "gpt-image-2.5-flare【1k快速1毛】"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:24.280Z:0:plan:f133a3bb-3019-49d4-bade-0ccbd5e16656:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "f133a3bb-3019-49d4-bade-0ccbd5e16656",
+      "parent_span_id": "real-eval-20260930-v1-C09-job",
+      "name": "creative_plan_started",
+      "stage": "plan",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:24.286Z",
+      "received_at": "2026-09-30T10:03:24.286Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:24.280Z:0",
+        "recovery": false,
+        "workflowVersion": "creative-telemetry-v1",
+        "promptVersion": "visual-plan-v2",
+        "actualModel": "qwen3-vl-plus"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:24.280Z:0:plan:f133a3bb-3019-49d4-bade-0ccbd5e16656:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "f133a3bb-3019-49d4-bade-0ccbd5e16656",
+      "parent_span_id": "real-eval-20260930-v1-C09-job",
+      "name": "creative_plan_completed",
+      "stage": "plan",
+      "status": "succeeded",
+      "duration_ms": 10941,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:35.227Z",
+      "received_at": "2026-09-30T10:03:35.227Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:24.280Z:0",
+        "recovery": false,
+        "strategySource": "model",
+        "rulesVersion": "category-0.1",
+        "providerRequestId": null,
+        "actualModel": "qwen3-vl-plus",
+        "usage": {
+          "input_tokens": 976,
+          "output_tokens": 321
+        }
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:24.280Z:0:generate:b9098774-2ec0-49cf-bbbd-c4a9b4e32386:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "b9098774-2ec0-49cf-bbbd-c4a9b4e32386",
+      "parent_span_id": "f133a3bb-3019-49d4-bade-0ccbd5e16656",
+      "name": "image_generation_started",
+      "stage": "generate",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:35.243Z",
+      "received_at": "2026-09-30T10:03:35.243Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:24.280Z:0",
+        "recovery": false,
+        "actualModel": "gpt-image-2.5-flare【1k快速1毛】",
+        "workflowVersion": "creative-telemetry-v1",
+        "conceptId": "scene"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:24.280Z:0:generate:b9098774-2ec0-49cf-bbbd-c4a9b4e32386:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "b9098774-2ec0-49cf-bbbd-c4a9b4e32386",
+      "parent_span_id": "f133a3bb-3019-49d4-bade-0ccbd5e16656",
+      "name": "image_generation_completed",
+      "stage": "generate",
+      "status": "succeeded",
+      "duration_ms": 22503,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:57.746Z",
+      "received_at": "2026-09-30T10:03:57.746Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:24.280Z:0",
+        "recovery": false,
+        "providerRequestId": null,
+        "conceptId": "scene"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:24.280Z:0:persist:7a711073-d914-4a81-88a6-522d36af6548:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "7a711073-d914-4a81-88a6-522d36af6548",
+      "parent_span_id": "b9098774-2ec0-49cf-bbbd-c4a9b4e32386",
+      "name": "background_persist_started",
+      "stage": "persist",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:57.759Z",
+      "received_at": "2026-09-30T10:03:57.759Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:24.280Z:0",
+        "recovery": false,
+        "workflowVersion": "creative-telemetry-v1"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:24.280Z:0:persist:7a711073-d914-4a81-88a6-522d36af6548:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "7a711073-d914-4a81-88a6-522d36af6548",
+      "parent_span_id": "b9098774-2ec0-49cf-bbbd-c4a9b4e32386",
+      "name": "background_persist_completed",
+      "stage": "persist",
+      "status": "succeeded",
+      "duration_ms": 29,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:57.788Z",
+      "received_at": "2026-09-30T10:03:57.788Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:24.280Z:0",
+        "recovery": false,
+        "conceptId": "scene"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:57.805Z:1:generate:0e533d74-9622-4463-8c35-120772c6f016:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "0e533d74-9622-4463-8c35-120772c6f016",
+      "parent_span_id": "real-eval-20260930-v1-C09-job",
+      "name": "image_generation_started",
+      "stage": "generate",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:57.819Z",
+      "received_at": "2026-09-30T10:03:57.819Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:57.805Z:1",
+        "recovery": false,
+        "actualModel": "gpt-image-2.5-flare【1k快速1毛】",
+        "workflowVersion": "creative-telemetry-v1",
+        "conceptId": "studio"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:57.805Z:1:generate:0e533d74-9622-4463-8c35-120772c6f016:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "0e533d74-9622-4463-8c35-120772c6f016",
+      "parent_span_id": "real-eval-20260930-v1-C09-job",
+      "name": "image_generation_completed",
+      "stage": "generate",
+      "status": "succeeded",
+      "duration_ms": 64461,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:02.280Z",
+      "received_at": "2026-09-30T10:05:02.280Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:57.805Z:1",
+        "recovery": false,
+        "providerRequestId": null,
+        "conceptId": "studio"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:57.805Z:1:persist:479dfc06-8107-450b-a7a4-3fccb970b62a:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "479dfc06-8107-450b-a7a4-3fccb970b62a",
+      "parent_span_id": "0e533d74-9622-4463-8c35-120772c6f016",
+      "name": "background_persist_started",
+      "stage": "persist",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:02.290Z",
+      "received_at": "2026-09-30T10:05:02.290Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:57.805Z:1",
+        "recovery": false,
+        "workflowVersion": "creative-telemetry-v1"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:57.805Z:1:persist:479dfc06-8107-450b-a7a4-3fccb970b62a:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "479dfc06-8107-450b-a7a4-3fccb970b62a",
+      "parent_span_id": "0e533d74-9622-4463-8c35-120772c6f016",
+      "name": "background_persist_completed",
+      "stage": "persist",
+      "status": "succeeded",
+      "duration_ms": 27,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:02.317Z",
+      "received_at": "2026-09-30T10:05:02.317Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:03:57.805Z:1",
+        "recovery": false,
+        "conceptId": "studio"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:05:02.337Z:2:generate:17298895-3904-4fd0-9cbd-0cdc934fad58:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "17298895-3904-4fd0-9cbd-0cdc934fad58",
+      "parent_span_id": "real-eval-20260930-v1-C09-job",
+      "name": "image_generation_started",
+      "stage": "generate",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:02.355Z",
+      "received_at": "2026-09-30T10:05:02.355Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:05:02.337Z:2",
+        "recovery": false,
+        "actualModel": "gpt-image-2.5-flare【1k快速1毛】",
+        "workflowVersion": "creative-telemetry-v1",
+        "conceptId": "graphic"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:05:02.337Z:2:generate:17298895-3904-4fd0-9cbd-0cdc934fad58:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "17298895-3904-4fd0-9cbd-0cdc934fad58",
+      "parent_span_id": "real-eval-20260930-v1-C09-job",
+      "name": "image_generation_completed",
+      "stage": "generate",
+      "status": "succeeded",
+      "duration_ms": 23750,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:26.106Z",
+      "received_at": "2026-09-30T10:05:26.106Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:05:02.337Z:2",
+        "recovery": false,
+        "providerRequestId": null,
+        "conceptId": "graphic"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:05:02.337Z:2:persist:1480d9f7-a552-45d0-a390-03066c874917:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "1480d9f7-a552-45d0-a390-03066c874917",
+      "parent_span_id": "17298895-3904-4fd0-9cbd-0cdc934fad58",
+      "name": "background_persist_started",
+      "stage": "persist",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:26.112Z",
+      "received_at": "2026-09-30T10:05:26.112Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:05:02.337Z:2",
+        "recovery": false,
+        "workflowVersion": "creative-telemetry-v1"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C09-job:2026-09-30T10:05:02.337Z:2:persist:1480d9f7-a552-45d0-a390-03066c874917:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "1480d9f7-a552-45d0-a390-03066c874917",
+      "parent_span_id": "17298895-3904-4fd0-9cbd-0cdc934fad58",
+      "name": "background_persist_completed",
+      "stage": "persist",
+      "status": "succeeded",
+      "duration_ms": 30,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:26.142Z",
+      "received_at": "2026-09-30T10:05:26.142Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C09-job:2026-09-30T10:05:02.337Z:2",
+        "recovery": false,
+        "conceptId": "graphic"
+      }
+    },
+    {
+      "id": "5b592f85-8c28-412c-b346-e426dd543930:save:c865e9f0-9e98-4eb6-9264-b3d1ce9e1a29:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "c865e9f0-9e98-4eb6-9264-b3d1ce9e1a29",
+      "parent_span_id": "real-eval-20260930-v1-C09-job",
+      "name": "asset_persist_started",
+      "stage": "save",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:26.615Z",
+      "received_at": "2026-09-30T10:05:26.615Z",
+      "data": {
+        "executionId": "5b592f85-8c28-412c-b346-e426dd543930",
+        "recovery": false,
+        "workflowVersion": "creative-telemetry-v1"
+      }
+    },
+    {
+      "id": "5b592f85-8c28-412c-b346-e426dd543930:save:c865e9f0-9e98-4eb6-9264-b3d1ce9e1a29:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": "c865e9f0-9e98-4eb6-9264-b3d1ce9e1a29",
+      "parent_span_id": "real-eval-20260930-v1-C09-job",
+      "name": "asset_persist_completed",
+      "stage": "save",
+      "status": "succeeded",
+      "duration_ms": 526,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:27.141Z",
+      "received_at": "2026-09-30T10:05:27.141Z",
+      "data": {
+        "executionId": "5b592f85-8c28-412c-b346-e426dd543930",
+        "recovery": false,
+        "compositionVersion": 1,
+        "assetCount": 3
+      }
+    },
+    {
+      "id": "asset_real-eval-20260930-v1-C09-job_v1_0:persisted",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": "asset_real-eval-20260930-v1-C09-job_v1_0",
+      "asset_version": 1,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "asset_persisted",
+      "stage": "save",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:27.155Z",
+      "received_at": "2026-09-30T10:05:27.155Z",
+      "data": {
+        "outputIndex": 0,
+        "conceptId": "scene"
+      }
+    },
+    {
+      "id": "auto_asset_real-eval-20260930-v1-C09-job_v1_0:checked",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": "asset_real-eval-20260930-v1-C09-job_v1_0",
+      "asset_version": 1,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "asset_rule_checked",
+      "stage": "quality",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:27.173Z",
+      "received_at": "2026-09-30T10:05:27.173Z",
+      "data": {
+        "score": 100,
+        "rubricVersion": "quality-v1",
+        "failedChecks": []
+      }
+    },
+    {
+      "id": "asset_real-eval-20260930-v1-C09-job_v1_1:persisted",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": "asset_real-eval-20260930-v1-C09-job_v1_1",
+      "asset_version": 1,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "asset_persisted",
+      "stage": "save",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:27.188Z",
+      "received_at": "2026-09-30T10:05:27.188Z",
+      "data": {
+        "outputIndex": 1,
+        "conceptId": "studio"
+      }
+    },
+    {
+      "id": "auto_asset_real-eval-20260930-v1-C09-job_v1_1:checked",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": "asset_real-eval-20260930-v1-C09-job_v1_1",
+      "asset_version": 1,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "asset_rule_checked",
+      "stage": "quality",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:27.208Z",
+      "received_at": "2026-09-30T10:05:27.208Z",
+      "data": {
+        "score": 100,
+        "rubricVersion": "quality-v1",
+        "failedChecks": []
+      }
+    },
+    {
+      "id": "asset_real-eval-20260930-v1-C09-job_v1_2:persisted",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": "asset_real-eval-20260930-v1-C09-job_v1_2",
+      "asset_version": 1,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "asset_persisted",
+      "stage": "save",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:27.229Z",
+      "received_at": "2026-09-30T10:05:27.229Z",
+      "data": {
+        "outputIndex": 2,
+        "conceptId": "graphic"
+      }
+    },
+    {
+      "id": "auto_asset_real-eval-20260930-v1-C09-job_v1_2:checked",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C09",
+      "task_id": "task_a009e766d5329d681fd2291033bed1e45d63633f95b9f49b7f023fdb6a829179",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "asset_id": "asset_real-eval-20260930-v1-C09-job_v1_2",
+      "asset_version": 1,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C09-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "asset_rule_checked",
+      "stage": "quality",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:05:27.253Z",
+      "received_at": "2026-09-30T10:05:27.254Z",
+      "data": {
+        "score": 100,
+        "rubricVersion": "quality-v1",
+        "failedChecks": []
+      }
+    }
+  ],
+  "product_rule_reviews": [
+    {
+      "asset_id": "asset_real-eval-20260930-v1-C09-job_v1_0",
+      "id": "auto_asset_real-eval-20260930-v1-C09-job_v1_0",
+      "owner_id": "local-preview-owner",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "kind": "automatic",
+      "rubric_version": "quality-v1",
+      "passed": 1,
+      "score": 100,
+      "created_at": "2026-09-30T10:05:27.168Z",
+      "report": {
+        "checks": [
+          {
+            "code": "FILE_READABLE",
+            "label": "文件可读取",
+            "passed": true
+          },
+          {
+            "code": "PNG_HEADER",
+            "label": "PNG 文件头与尺寸可识别",
+            "passed": true
+          },
+          {
+            "code": "OUTPUT_SIZE",
+            "label": "尺寸 1080 × 1080",
+            "passed": true
+          },
+          {
+            "code": "COPY_LENGTH",
+            "label": "标题与副标题长度",
+            "passed": true
+          }
+        ],
+        "dimensions": {
+          "width": 1080,
+          "height": 1080
+        },
+        "scope": "文件、尺寸与文本规则；商品一致性、光影与设计感由人工评审",
+        "rubricVersion": "quality-v1"
+      }
+    },
+    {
+      "asset_id": "asset_real-eval-20260930-v1-C09-job_v1_1",
+      "id": "auto_asset_real-eval-20260930-v1-C09-job_v1_1",
+      "owner_id": "local-preview-owner",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "kind": "automatic",
+      "rubric_version": "quality-v1",
+      "passed": 1,
+      "score": 100,
+      "created_at": "2026-09-30T10:05:27.201Z",
+      "report": {
+        "checks": [
+          {
+            "code": "FILE_READABLE",
+            "label": "文件可读取",
+            "passed": true
+          },
+          {
+            "code": "PNG_HEADER",
+            "label": "PNG 文件头与尺寸可识别",
+            "passed": true
+          },
+          {
+            "code": "OUTPUT_SIZE",
+            "label": "尺寸 1080 × 1080",
+            "passed": true
+          },
+          {
+            "code": "COPY_LENGTH",
+            "label": "标题与副标题长度",
+            "passed": true
+          }
+        ],
+        "dimensions": {
+          "width": 1080,
+          "height": 1080
+        },
+        "scope": "文件、尺寸与文本规则；商品一致性、光影与设计感由人工评审",
+        "rubricVersion": "quality-v1"
+      }
+    },
+    {
+      "asset_id": "asset_real-eval-20260930-v1-C09-job_v1_2",
+      "id": "auto_asset_real-eval-20260930-v1-C09-job_v1_2",
+      "owner_id": "local-preview-owner",
+      "job_id": "real-eval-20260930-v1-C09-job",
+      "kind": "automatic",
+      "rubric_version": "quality-v1",
+      "passed": 1,
+      "score": 100,
+      "created_at": "2026-09-30T10:05:27.246Z",
+      "report": {
+        "checks": [
+          {
+            "code": "FILE_READABLE",
+            "label": "文件可读取",
+            "passed": true
+          },
+          {
+            "code": "PNG_HEADER",
+            "label": "PNG 文件头与尺寸可识别",
+            "passed": true
+          },
+          {
+            "code": "OUTPUT_SIZE",
+            "label": "尺寸 1080 × 1080",
+            "passed": true
+          },
+          {
+            "code": "COPY_LENGTH",
+            "label": "标题与副标题长度",
+            "passed": true
+          }
+        ],
+        "dimensions": {
+          "width": 1080,
+          "height": 1080
+        },
+        "scope": "文件、尺寸与文本规则；商品一致性、光影与设计感由人工评审",
+        "rubricVersion": "quality-v1"
+      }
+    }
+  ],
+  "business_status": "delivered",
+  "provider_calls": 3,
+  "finished_at": "2026-09-30T10:05:27.368Z",
+  "duration_ms": 125632,
+  "contract_status": "pass",
+  "raw_model_images": [
+    {
+      "concept_id": "scene",
+      "path": "E:/...AAAAIIIIIAIPM/个人项目/outputs/real-eval-20260930/C09/raw-scene.png",
+      "width": 1254,
+      "height": 1254,
+      "requested_width": 1024,
+      "requested_height": 1024,
+      "matches_requested_size": false,
+      "matches_requested_aspect": true
+    },
+    {
+      "concept_id": "studio",
+      "path": "E:/...AAAAIIIIIAIPM/个人项目/outputs/real-eval-20260930/C09/raw-studio.png",
+      "width": 1254,
+      "height": 1254,
+      "requested_width": 1024,
+      "requested_height": 1024,
+      "matches_requested_size": false,
+      "matches_requested_aspect": true
+    },
+    {
+      "concept_id": "graphic",
+      "path": "E:/...AAAAIIIIIAIPM/个人项目/outputs/real-eval-20260930/C09/raw-graphic.png",
+      "width": 1254,
+      "height": 1254,
+      "requested_width": 1024,
+      "requested_height": 1024,
+      "matches_requested_size": false,
+      "matches_requested_aspect": true
+    }
+  ],
+  "report_checks": [
+    {
+      "code": "final_dimensions_match_requested_ratio",
+      "passed": true
+    },
+    {
+      "code": "raw_model_aspect_ratio_matches_request",
+      "passed": true,
+      "actual": [
+        {
+          "concept_id": "scene",
+          "path": "E:/...AAAAIIIIIAIPM/个人项目/outputs/real-eval-20260930/C09/raw-scene.png",
+          "width": 1254,
+          "height": 1254,
+          "requested_width": 1024,
+          "requested_height": 1024,
+          "matches_requested_size": false,
+          "matches_requested_aspect": true
+        },
+        {
+          "concept_id": "studio",
+          "path": "E:/...AAAAIIIIIAIPM/个人项目/outputs/real-eval-20260930/C09/raw-studio.png",
+          "width": 1254,
+          "height": 1254,
+          "requested_width": 1024,
+          "requested_height": 1024,
+          "matches_requested_size": false,
+          "matches_requested_aspect": true
+        },
+        {
+          "concept_id": "graphic",
+          "path": "E:/...AAAAIIIIIAIPM/个人项目/outputs/real-eval-20260930/C09/raw-graphic.png",
+          "width": 1254,
+          "height": 1254,
+          "requested_width": 1024,
+          "requested_height": 1024,
+          "matches_requested_size": false,
+          "matches_requested_aspect": true
+        }
+      ]
+    }
+  ],
+  "visual_pre_review": [
+    {
+      "case_id": "C09",
+      "reviewer": "AI助手",
+      "review_type": "visual_pre_review",
+      "verdict": "仅图片创作可完成，中文断行问题复现",
+      "finding": "未填名称与规格，三张均生成单瓶粉白包装画面。自动标题未新增数值和功效；graphic 出现行首逗号和末行单字‘上’。",
+      "hypothesis": "商品图足以触发当前自动策略；排版复现了 C05 的逐字断行缺少中文禁则及孤字控制问题。",
+      "next_validation": "与 C05 共用排版修复回归集，另行人工核对小字与营销内容。",
+      "evidence": [
+        "C09/comparison.jpg",
+        "C09/graphic.png"
+      ],
+      "human_acceptance": "pending"
+    }
+  ],
+  "post_run_analysis": true
+}

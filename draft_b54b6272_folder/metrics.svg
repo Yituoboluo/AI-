@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1295" viewBox="0 0 1600 1295">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 4 L0 8 z" fill="#7A4A33"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1600" height="1295" rx="0" fill="#FFF8EE"/>
+  <text x="70" y="100" font-size="54" font-weight="700" fill="#7A4A33" text-anchor="start">从生成图片到素材采用</text>
+  <circle cx="145" cy="272" r="79" fill="#F9C2BD"/>
+  <text x="145" y="285" font-size="30" font-weight="700" fill="#7A4A33" text-anchor="middle">北极星</text>
+  <rect x="265" y="176" width="1265" height="192" rx="28" fill="#F69834"/>
+  <text x="305" y="239" font-size="44" font-weight="700" fill="#7A4A33" text-anchor="start">每周获得采用的创意任务数</text>
+  <text x="308" y="292" font-size="28" font-weight="400" fill="#7A4A33" text-anchor="start">按逻辑 task 去重</text>
+  <text x="308" y="335" font-size="28" font-weight="400" fill="#7A4A33" text-anchor="start">每个采用记录关联已保存的具体图片版本</text>
+  <line x1="800" y1="384" x2="800" y2="428" stroke="#7A4A33" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="846" y="414" font-size="25" font-weight="400" fill="#7A4A33" text-anchor="start">以真实采用结果校准</text>
+  <rect x="230" y="456" width="1140" height="304" rx="28" fill="#F9C2BD"/>
+  <text x="274" y="507" font-size="26" font-weight="700" fill="#7A4A33" text-anchor="start">当前离线核心</text>
+  <text x="274" y="566" font-size="44" font-weight="700" fill="#7A4A33" text-anchor="start">首轮可采用任务率</text>
+  <text x="636" y="622" font-size="28" font-weight="400" fill="#7A4A33" text-anchor="middle">首轮至少一张可采用的任务数</text>
+  <line x1="337" y1="642" x2="935" y2="642" stroke="#7A4A33" stroke-width="2"/>
+  <text x="636" y="689" font-size="28" font-weight="400" fill="#7A4A33" text-anchor="middle">全部有效已执行视觉任务数</text>
+  <rect x="994" y="557" width="328" height="144" rx="22" fill="#FFF8EE"/>
+  <text x="1022" y="611" font-size="25" font-weight="700" fill="#7A4A33" text-anchor="start">技术失败计入分母</text>
+  <text x="1022" y="658" font-size="25" font-weight="700" fill="#7A4A33" text-anchor="start">待评审清零后定稿</text>
+  <line x1="800" y1="781" x2="800" y2="832" stroke="#7A4A33" stroke-width="3"/>
+  <line x1="200" y1="832" x2="1400" y2="832" stroke="#7A4A33" stroke-width="3"/>
+  <line x1="200" y1="832" x2="200" y2="877" stroke="#7A4A33" stroke-width="3" marker-end="url(#arrow)"/>
+  <circle cx="200" cy="982" r="86" fill="#F69834"/>
+  <text x="200" y="995" font-size="30" font-weight="700" fill="#7A4A33" text-anchor="middle">交付成功</text>
+  <text x="200" y="1110" font-size="24" font-weight="400" fill="#7A4A33" text-anchor="middle">能否合成并保存</text>
+  <text x="200" y="1149" font-size="24" font-weight="400" fill="#7A4A33" text-anchor="middle">可回看的图片</text>
+  <line x1="500" y1="832" x2="500" y2="877" stroke="#7A4A33" stroke-width="3" marker-end="url(#arrow)"/>
+  <circle cx="500" cy="982" r="86" fill="#F9C2BD"/>
+  <text x="500" y="995" font-size="30" font-weight="700" fill="#7A4A33" text-anchor="middle">商品准确</text>
+  <text x="500" y="1110" font-size="24" font-weight="400" fill="#7A4A33" text-anchor="middle">外观与关键信息</text>
+  <text x="500" y="1149" font-size="24" font-weight="400" fill="#7A4A33" text-anchor="middle">符合商品事实</text>
+  <line x1="800" y1="832" x2="800" y2="877" stroke="#7A4A33" stroke-width="3" marker-end="url(#arrow)"/>
+  <circle cx="800" cy="982" r="86" fill="#F69834"/>
+  <text x="800" y="995" font-size="30" font-weight="700" fill="#7A4A33" text-anchor="middle">视觉差异</text>
+  <text x="800" y="1110" font-size="24" font-weight="400" fill="#7A4A33" text-anchor="middle">构图与视觉方案</text>
+  <text x="800" y="1149" font-size="24" font-weight="400" fill="#7A4A33" text-anchor="middle">有可辨识变化</text>
+  <line x1="1100" y1="832" x2="1100" y2="877" stroke="#7A4A33" stroke-width="3" marker-end="url(#arrow)"/>
+  <circle cx="1100" cy="982" r="86" fill="#F9C2BD"/>
+  <text x="1100" y="995" font-size="30" font-weight="700" fill="#7A4A33" text-anchor="middle">时间效率</text>
+  <text x="1100" y="1110" font-size="24" font-weight="400" fill="#7A4A33" text-anchor="middle">生成受理到可用图</text>
+  <text x="1100" y="1149" font-size="24" font-weight="400" fill="#7A4A33" text-anchor="middle">所需时间</text>
+  <line x1="1400" y1="832" x2="1400" y2="877" stroke="#7A4A33" stroke-width="3" marker-end="url(#arrow)"/>
+  <circle cx="1400" cy="982" r="86" fill="#F69834"/>
+  <text x="1400" y="995" font-size="30" font-weight="700" fill="#7A4A33" text-anchor="middle">采用成本</text>
+  <text x="1400" y="1110" font-size="24" font-weight="400" fill="#7A4A33" text-anchor="middle">为得到可采用图</text>
+  <text x="1400" y="1149" font-size="24" font-weight="400" fill="#7A4A33" text-anchor="middle">付出的总成本</text>
+  <line x1="70" y1="1192" x2="1530" y2="1192" stroke="#7A4A33" stroke-width="2"/>
+  <text x="70" y="1242" font-size="28" font-weight="700" fill="#7A4A33" text-anchor="start">导出请求是行为代理，不等于实际采用</text>
+</svg>

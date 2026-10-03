@@ -1,0 +1,37 @@
+{
+  "createdAt": "2026-09-30T10:54:59.714Z",
+  "sourceTaskId": "cmuny0px80013bxi8791t27qt",
+  "evaluatorId": "cmunzmqco001xbxi84wtrno40",
+  "tasks": [
+    {
+      "id": "cmunznt6d001zbxi8x06xa07u",
+      "userId": "cmunvskck0000bxcs4kbr4bl4",
+      "sourceTaskId": "cmuny0px80013bxi8791t27qt",
+      "evaluatorId": "cmunzmqco001xbxi84wtrno40",
+      "status": "queued",
+      "totalRows": 12,
+      "successRows": 0,
+      "failedRows": 0,
+      "skippedRows": 0,
+      "notifyDingTalk": false,
+      "avgScore": null,
+      "startedAt": null,
+      "endedAt": null,
+      "createdAt": "2026-09-30T10:54:59.701Z",
+      "updatedAt": "2026-09-30T10:54:59.701Z",
+      "evaluator": {
+        "id": "cmunzmqco001xbxi84wtrno40",
+        "name": "造物营 · 执行与文本约束 · 非视觉评估 v1"
+      },
+      "sourceTask": {
+        "id": "cmuny0px80013bxi8791t27qt",
+        "dataset": {
+          "name": "造物营 · 真实评测证据汇总 · 12场景 · 边界校准版v1.1"
+        },
+        "profile": {
+          "name": "真实评测证据复核 · 不重复调用模型"
+        }
+      }
+    }
+  ]
+}

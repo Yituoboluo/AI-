@@ -1,0 +1,35 @@
+[
+  {
+    "document_id": "PJe2dvUFBoZDwgxItzicypzWnef",
+    "revision": 9,
+    "text_units_checked": 1820,
+    "missing_units": [],
+    "tables": 60,
+    "images": 3,
+    "whiteboards": 4,
+    "mermaid_blocks": 12,
+    "major_sections": [
+      "概述（为什么做）",
+      "产品描述（做什么）",
+      "功能需求（怎么做）",
+      "非功能需求（注意事项）",
+      "附录（补充文档）"
+    ]
+  },
+  {
+    "document_id": "DIUfd394noTTDIxLDJrcGSMxnFe",
+    "revision": 4,
+    "text_units_checked": 45,
+    "missing_units": [],
+    "tables": 0,
+    "images": 0,
+    "whiteboards": 0,
+    "mermaid_blocks": 0,
+    "major_sections": [
+      "必须确认（影响价值结论或扩大试用）",
+      "建议确认（影响试用验收和完整度）",
+      "可后续补充（当前范围已收窄）",
+      "需要执行的验收工作"
+    ]
+  }
+]

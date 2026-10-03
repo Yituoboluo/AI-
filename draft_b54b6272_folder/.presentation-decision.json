@@ -1,0 +1,1 @@
+{"audience":"检查个人项目的授课老师和项目作者","reader_task":"检查指标和埋点设计、评测集与Badcase证据，并明确18小时内的执行顺序","genre_contract":"workplace.execution_plan","adapter":null,"presentation_mode":"rich","visual_plan":{"reason":"需要将价值指标、生成阶段的事件以及评测归因闭环的依赖关系可视化，正文给出可执行口径和验收标准","blocks":[{"type":"whiteboard","min_count":3,"purpose":"展示指标体系、埋点链路和Badcase评测闭环"}]}}

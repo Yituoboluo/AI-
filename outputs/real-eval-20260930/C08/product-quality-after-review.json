@@ -1,0 +1,864 @@
+{
+  "job": {
+    "id": "real-eval-20260930-v1-C08-job",
+    "projectId": "real-eval-20260930-v1-C08",
+    "taskId": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+    "attemptNo": 1,
+    "parentJobId": null,
+    "inputFingerprint": "ad1cc09433a11318a0b370010a646b3a7abff2a7072107abb2c0b0d07177f407",
+    "environment": "evaluation",
+    "model": "gpt-image-2.5-flare【1k快速1毛】",
+    "workflowVersion": "creative-telemetry-v1",
+    "status": "succeeded",
+    "createdAt": "2026-09-30T10:02:50.433Z",
+    "evaluation": {
+      "batchId": "real-eval-20260930-v1",
+      "caseId": "C08",
+      "variant": "A"
+    },
+    "compositionVersion": 1,
+    "expectedCount": 3,
+    "hasCompositions": true
+  },
+  "assets": [
+    {
+      "id": "asset_real-eval-20260930-v1-C08-job_v1_0",
+      "owner_id": "local-preview-owner",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "version": 1,
+      "output_index": 0,
+      "concept_id": "scene",
+      "image_url": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/3f1d043380de2adfe0eda2728bd9eba7ab29aae763d7e42f3b373551ef717c3f.png",
+      "title": "晨光微醺，一口清甜的静谧时光",
+      "subtitle": "",
+      "layout": "right",
+      "created_at": "2026-09-30T10:04:16.964Z",
+      "metadata": {
+        "ratio": "square",
+        "workflowVersion": "creative-telemetry-v1",
+        "model": "gpt-image-2.5-flare【1k快速1毛】",
+        "sourceRevision": 1
+      },
+      "current": true,
+      "feedback": null,
+      "reviews": [
+        {
+          "id": "auto_asset_real-eval-20260930-v1-C08-job_v1_0",
+          "owner_id": "local-preview-owner",
+          "job_id": "real-eval-20260930-v1-C08-job",
+          "asset_id": "asset_real-eval-20260930-v1-C08-job_v1_0",
+          "kind": "automatic",
+          "rubric_version": "quality-v1",
+          "passed": 1,
+          "score": 100,
+          "created_at": "2026-09-30T10:04:16.984Z",
+          "report": {
+            "checks": [
+              {
+                "code": "FILE_READABLE",
+                "label": "文件可读取",
+                "passed": true
+              },
+              {
+                "code": "PNG_HEADER",
+                "label": "PNG 文件头与尺寸可识别",
+                "passed": true
+              },
+              {
+                "code": "OUTPUT_SIZE",
+                "label": "尺寸 1080 × 1080",
+                "passed": true
+              },
+              {
+                "code": "COPY_LENGTH",
+                "label": "标题与副标题长度",
+                "passed": true
+              }
+            ],
+            "dimensions": {
+              "width": 1080,
+              "height": 1080
+            },
+            "scope": "文件、尺寸与文本规则；商品一致性、光影与设计感由人工评审",
+            "rubricVersion": "quality-v1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "asset_real-eval-20260930-v1-C08-job_v1_1",
+      "owner_id": "local-preview-owner",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "version": 1,
+      "output_index": 1,
+      "concept_id": "studio",
+      "image_url": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/0d759e1e2b60ddc12325fe2b804d28dcf628fb8f03ba76f52e13e9e5cec67a25.png",
+      "title": "晶莹爆珠在乳白浪花中悄然绽放",
+      "subtitle": "",
+      "layout": "center",
+      "created_at": "2026-09-30T10:04:16.997Z",
+      "metadata": {
+        "ratio": "square",
+        "workflowVersion": "creative-telemetry-v1",
+        "model": "gpt-image-2.5-flare【1k快速1毛】",
+        "sourceRevision": 1
+      },
+      "current": true,
+      "feedback": null,
+      "reviews": [
+        {
+          "id": "auto_asset_real-eval-20260930-v1-C08-job_v1_1",
+          "owner_id": "local-preview-owner",
+          "job_id": "real-eval-20260930-v1-C08-job",
+          "asset_id": "asset_real-eval-20260930-v1-C08-job_v1_1",
+          "kind": "automatic",
+          "rubric_version": "quality-v1",
+          "passed": 1,
+          "score": 100,
+          "created_at": "2026-09-30T10:04:17.017Z",
+          "report": {
+            "checks": [
+              {
+                "code": "FILE_READABLE",
+                "label": "文件可读取",
+                "passed": true
+              },
+              {
+                "code": "PNG_HEADER",
+                "label": "PNG 文件头与尺寸可识别",
+                "passed": true
+              },
+              {
+                "code": "OUTPUT_SIZE",
+                "label": "尺寸 1080 × 1080",
+                "passed": true
+              },
+              {
+                "code": "COPY_LENGTH",
+                "label": "标题与副标题长度",
+                "passed": true
+              }
+            ],
+            "dimensions": {
+              "width": 1080,
+              "height": 1080
+            },
+            "scope": "文件、尺寸与文本规则；商品一致性、光影与设计感由人工评审",
+            "rubricVersion": "quality-v1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "asset_real-eval-20260930-v1-C08-job_v1_2",
+      "owner_id": "local-preview-owner",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "version": 1,
+      "output_index": 2,
+      "concept_id": "graphic",
+      "image_url": "/api/assets/527cb7a7e1a3997306524dc702d3cc14f5874998655daacb230a72da156a2977/assets/e5dff1d2a27a657c26315f9fae28f0468c549d10882733e7e45ab94ae696776d.png",
+      "title": "紫色韵律与深蓝圆点的味觉几何诗",
+      "subtitle": "",
+      "layout": "left",
+      "created_at": "2026-09-30T10:04:17.030Z",
+      "metadata": {
+        "ratio": "square",
+        "workflowVersion": "creative-telemetry-v1",
+        "model": "gpt-image-2.5-flare【1k快速1毛】",
+        "sourceRevision": 1
+      },
+      "current": true,
+      "feedback": null,
+      "reviews": [
+        {
+          "id": "auto_asset_real-eval-20260930-v1-C08-job_v1_2",
+          "owner_id": "local-preview-owner",
+          "job_id": "real-eval-20260930-v1-C08-job",
+          "asset_id": "asset_real-eval-20260930-v1-C08-job_v1_2",
+          "kind": "automatic",
+          "rubric_version": "quality-v1",
+          "passed": 1,
+          "score": 100,
+          "created_at": "2026-09-30T10:04:17.051Z",
+          "report": {
+            "checks": [
+              {
+                "code": "FILE_READABLE",
+                "label": "文件可读取",
+                "passed": true
+              },
+              {
+                "code": "PNG_HEADER",
+                "label": "PNG 文件头与尺寸可识别",
+                "passed": true
+              },
+              {
+                "code": "OUTPUT_SIZE",
+                "label": "尺寸 1080 × 1080",
+                "passed": true
+              },
+              {
+                "code": "COPY_LENGTH",
+                "label": "标题与副标题长度",
+                "passed": true
+              }
+            ],
+            "dimensions": {
+              "width": 1080,
+              "height": 1080
+            },
+            "scope": "文件、尺寸与文本规则；商品一致性、光影与设计感由人工评审",
+            "rubricVersion": "quality-v1"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": [],
+  "events": [
+    {
+      "id": "016ceadf-da13-4ab0-a701-ab3175c1e15b",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": null,
+      "job_id": null,
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-input",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "cutout_completed",
+      "stage": "cutout",
+      "status": "succeeded",
+      "duration_ms": 2040,
+      "source": "client",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:02:50.416Z",
+      "received_at": "2026-09-30T10:02:50.416Z",
+      "data": {
+        "inputId": "real-eval-20260930-v1-C08-input"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:accepted",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "generation_accepted",
+      "stage": "queue",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:02:50.433Z",
+      "received_at": "2026-09-30T10:02:50.433Z",
+      "data": {
+        "attemptNo": 1,
+        "parentJobId": null,
+        "workflowVersion": "creative-telemetry-v1",
+        "model": "gpt-image-2.5-flare【1k快速1毛】"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:02:50.447Z:0:plan:a3666b84-dc5c-41ad-ad78-2c38491af016:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "a3666b84-dc5c-41ad-ad78-2c38491af016",
+      "parent_span_id": "real-eval-20260930-v1-C08-job",
+      "name": "creative_plan_started",
+      "stage": "plan",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:02:50.453Z",
+      "received_at": "2026-09-30T10:02:50.453Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:02:50.447Z:0",
+        "recovery": false,
+        "workflowVersion": "creative-telemetry-v1",
+        "promptVersion": "visual-plan-v2",
+        "actualModel": "qwen3-vl-plus"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:02:50.447Z:0:plan:a3666b84-dc5c-41ad-ad78-2c38491af016:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "a3666b84-dc5c-41ad-ad78-2c38491af016",
+      "parent_span_id": "real-eval-20260930-v1-C08-job",
+      "name": "creative_plan_completed",
+      "stage": "plan",
+      "status": "succeeded",
+      "duration_ms": 10454,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:00.907Z",
+      "received_at": "2026-09-30T10:03:00.907Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:02:50.447Z:0",
+        "recovery": false,
+        "strategySource": "model",
+        "rulesVersion": "category-0.1",
+        "providerRequestId": null,
+        "actualModel": "qwen3-vl-plus",
+        "usage": {
+          "input_tokens": 976,
+          "output_tokens": 336
+        }
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:02:50.447Z:0:generate:0f7b3e68-930f-4580-8968-84165e4a4534:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "0f7b3e68-930f-4580-8968-84165e4a4534",
+      "parent_span_id": "a3666b84-dc5c-41ad-ad78-2c38491af016",
+      "name": "image_generation_started",
+      "stage": "generate",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:00.922Z",
+      "received_at": "2026-09-30T10:03:00.922Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:02:50.447Z:0",
+        "recovery": false,
+        "actualModel": "gpt-image-2.5-flare【1k快速1毛】",
+        "workflowVersion": "creative-telemetry-v1",
+        "conceptId": "scene"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:02:50.447Z:0:generate:0f7b3e68-930f-4580-8968-84165e4a4534:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "0f7b3e68-930f-4580-8968-84165e4a4534",
+      "parent_span_id": "a3666b84-dc5c-41ad-ad78-2c38491af016",
+      "name": "image_generation_completed",
+      "stage": "generate",
+      "status": "succeeded",
+      "duration_ms": 24320,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:25.242Z",
+      "received_at": "2026-09-30T10:03:25.242Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:02:50.447Z:0",
+        "recovery": false,
+        "providerRequestId": null,
+        "conceptId": "scene"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:02:50.447Z:0:persist:a7a27220-035f-44ba-bfef-124c083711ba:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "a7a27220-035f-44ba-bfef-124c083711ba",
+      "parent_span_id": "0f7b3e68-930f-4580-8968-84165e4a4534",
+      "name": "background_persist_started",
+      "stage": "persist",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:25.250Z",
+      "received_at": "2026-09-30T10:03:25.250Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:02:50.447Z:0",
+        "recovery": false,
+        "workflowVersion": "creative-telemetry-v1"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:02:50.447Z:0:persist:a7a27220-035f-44ba-bfef-124c083711ba:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "a7a27220-035f-44ba-bfef-124c083711ba",
+      "parent_span_id": "0f7b3e68-930f-4580-8968-84165e4a4534",
+      "name": "background_persist_completed",
+      "stage": "persist",
+      "status": "succeeded",
+      "duration_ms": 32,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:25.282Z",
+      "received_at": "2026-09-30T10:03:25.282Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:02:50.447Z:0",
+        "recovery": false,
+        "conceptId": "scene"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:25.312Z:1:generate:946f906a-65a4-4967-8d2b-d06103145c44:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "946f906a-65a4-4967-8d2b-d06103145c44",
+      "parent_span_id": "real-eval-20260930-v1-C08-job",
+      "name": "image_generation_started",
+      "stage": "generate",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:25.330Z",
+      "received_at": "2026-09-30T10:03:25.330Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:25.312Z:1",
+        "recovery": false,
+        "actualModel": "gpt-image-2.5-flare【1k快速1毛】",
+        "workflowVersion": "creative-telemetry-v1",
+        "conceptId": "studio"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:25.312Z:1:generate:946f906a-65a4-4967-8d2b-d06103145c44:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "946f906a-65a4-4967-8d2b-d06103145c44",
+      "parent_span_id": "real-eval-20260930-v1-C08-job",
+      "name": "image_generation_completed",
+      "stage": "generate",
+      "status": "succeeded",
+      "duration_ms": 26294,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:51.625Z",
+      "received_at": "2026-09-30T10:03:51.625Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:25.312Z:1",
+        "recovery": false,
+        "providerRequestId": null,
+        "conceptId": "studio"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:25.312Z:1:persist:5d83a4fa-c0c2-4087-bd89-064d5255f806:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "5d83a4fa-c0c2-4087-bd89-064d5255f806",
+      "parent_span_id": "946f906a-65a4-4967-8d2b-d06103145c44",
+      "name": "background_persist_started",
+      "stage": "persist",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:51.631Z",
+      "received_at": "2026-09-30T10:03:51.631Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:25.312Z:1",
+        "recovery": false,
+        "workflowVersion": "creative-telemetry-v1"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:25.312Z:1:persist:5d83a4fa-c0c2-4087-bd89-064d5255f806:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "5d83a4fa-c0c2-4087-bd89-064d5255f806",
+      "parent_span_id": "946f906a-65a4-4967-8d2b-d06103145c44",
+      "name": "background_persist_completed",
+      "stage": "persist",
+      "status": "succeeded",
+      "duration_ms": 30,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:51.661Z",
+      "received_at": "2026-09-30T10:03:51.661Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:25.312Z:1",
+        "recovery": false,
+        "conceptId": "studio"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:51.679Z:2:generate:68ac686d-3dd2-40ad-871b-925153440b94:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "68ac686d-3dd2-40ad-871b-925153440b94",
+      "parent_span_id": "real-eval-20260930-v1-C08-job",
+      "name": "image_generation_started",
+      "stage": "generate",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:03:51.695Z",
+      "received_at": "2026-09-30T10:03:51.695Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:51.679Z:2",
+        "recovery": false,
+        "actualModel": "gpt-image-2.5-flare【1k快速1毛】",
+        "workflowVersion": "creative-telemetry-v1",
+        "conceptId": "graphic"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:51.679Z:2:generate:68ac686d-3dd2-40ad-871b-925153440b94:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "68ac686d-3dd2-40ad-871b-925153440b94",
+      "parent_span_id": "real-eval-20260930-v1-C08-job",
+      "name": "image_generation_completed",
+      "stage": "generate",
+      "status": "succeeded",
+      "duration_ms": 24172,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:04:15.867Z",
+      "received_at": "2026-09-30T10:04:15.867Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:51.679Z:2",
+        "recovery": false,
+        "providerRequestId": null,
+        "conceptId": "graphic"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:51.679Z:2:persist:72837105-c969-4924-bfae-1a6bcc70b553:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "72837105-c969-4924-bfae-1a6bcc70b553",
+      "parent_span_id": "68ac686d-3dd2-40ad-871b-925153440b94",
+      "name": "background_persist_started",
+      "stage": "persist",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:04:15.874Z",
+      "received_at": "2026-09-30T10:04:15.874Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:51.679Z:2",
+        "recovery": false,
+        "workflowVersion": "creative-telemetry-v1"
+      }
+    },
+    {
+      "id": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:51.679Z:2:persist:72837105-c969-4924-bfae-1a6bcc70b553:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "72837105-c969-4924-bfae-1a6bcc70b553",
+      "parent_span_id": "68ac686d-3dd2-40ad-871b-925153440b94",
+      "name": "background_persist_completed",
+      "stage": "persist",
+      "status": "succeeded",
+      "duration_ms": 24,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:04:15.898Z",
+      "received_at": "2026-09-30T10:04:15.899Z",
+      "data": {
+        "executionId": "real-eval-20260930-v1-C08-job:2026-09-30T10:03:51.679Z:2",
+        "recovery": false,
+        "conceptId": "graphic"
+      }
+    },
+    {
+      "id": "89783da9-3506-402d-a753-1e6c98538556:save:3eea5b13-c26b-4aa2-a7dc-15757d9e95db:start",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "3eea5b13-c26b-4aa2-a7dc-15757d9e95db",
+      "parent_span_id": "real-eval-20260930-v1-C08-job",
+      "name": "asset_persist_started",
+      "stage": "save",
+      "status": "started",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:04:16.405Z",
+      "received_at": "2026-09-30T10:04:16.405Z",
+      "data": {
+        "executionId": "89783da9-3506-402d-a753-1e6c98538556",
+        "recovery": false,
+        "workflowVersion": "creative-telemetry-v1"
+      }
+    },
+    {
+      "id": "89783da9-3506-402d-a753-1e6c98538556:save:3eea5b13-c26b-4aa2-a7dc-15757d9e95db:end",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": null,
+      "asset_version": null,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": "3eea5b13-c26b-4aa2-a7dc-15757d9e95db",
+      "parent_span_id": "real-eval-20260930-v1-C08-job",
+      "name": "asset_persist_completed",
+      "stage": "save",
+      "status": "succeeded",
+      "duration_ms": 550,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:04:16.955Z",
+      "received_at": "2026-09-30T10:04:16.955Z",
+      "data": {
+        "executionId": "89783da9-3506-402d-a753-1e6c98538556",
+        "recovery": false,
+        "compositionVersion": 1,
+        "assetCount": 3
+      }
+    },
+    {
+      "id": "asset_real-eval-20260930-v1-C08-job_v1_0:persisted",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": "asset_real-eval-20260930-v1-C08-job_v1_0",
+      "asset_version": 1,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "asset_persisted",
+      "stage": "save",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:04:16.970Z",
+      "received_at": "2026-09-30T10:04:16.970Z",
+      "data": {
+        "outputIndex": 0,
+        "conceptId": "scene"
+      }
+    },
+    {
+      "id": "auto_asset_real-eval-20260930-v1-C08-job_v1_0:checked",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": "asset_real-eval-20260930-v1-C08-job_v1_0",
+      "asset_version": 1,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "asset_rule_checked",
+      "stage": "quality",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:04:16.990Z",
+      "received_at": "2026-09-30T10:04:16.990Z",
+      "data": {
+        "score": 100,
+        "rubricVersion": "quality-v1",
+        "failedChecks": []
+      }
+    },
+    {
+      "id": "asset_real-eval-20260930-v1-C08-job_v1_1:persisted",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": "asset_real-eval-20260930-v1-C08-job_v1_1",
+      "asset_version": 1,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "asset_persisted",
+      "stage": "save",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:04:17.003Z",
+      "received_at": "2026-09-30T10:04:17.003Z",
+      "data": {
+        "outputIndex": 1,
+        "conceptId": "studio"
+      }
+    },
+    {
+      "id": "auto_asset_real-eval-20260930-v1-C08-job_v1_1:checked",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": "asset_real-eval-20260930-v1-C08-job_v1_1",
+      "asset_version": 1,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "asset_rule_checked",
+      "stage": "quality",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:04:17.024Z",
+      "received_at": "2026-09-30T10:04:17.024Z",
+      "data": {
+        "score": 100,
+        "rubricVersion": "quality-v1",
+        "failedChecks": []
+      }
+    },
+    {
+      "id": "asset_real-eval-20260930-v1-C08-job_v1_2:persisted",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": "asset_real-eval-20260930-v1-C08-job_v1_2",
+      "asset_version": 1,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "asset_persisted",
+      "stage": "save",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:04:17.037Z",
+      "received_at": "2026-09-30T10:04:17.037Z",
+      "data": {
+        "outputIndex": 2,
+        "conceptId": "graphic"
+      }
+    },
+    {
+      "id": "auto_asset_real-eval-20260930-v1-C08-job_v1_2:checked",
+      "owner_id": "local-preview-owner",
+      "project_id": "real-eval-20260930-v1-C08",
+      "task_id": "task_45ff6bd72267609b26a9e9a3b6c47eee16280ff4db5d0241f8f966ca95d2a68a",
+      "job_id": "real-eval-20260930-v1-C08-job",
+      "asset_id": "asset_real-eval-20260930-v1-C08-job_v1_2",
+      "asset_version": 1,
+      "input_revision": 1,
+      "trace_id": "real-eval-20260930-v1-C08-job",
+      "span_id": null,
+      "parent_span_id": null,
+      "name": "asset_rule_checked",
+      "stage": "quality",
+      "status": "succeeded",
+      "duration_ms": null,
+      "source": "server",
+      "environment": "evaluation",
+      "occurred_at": "2026-09-30T10:04:17.058Z",
+      "received_at": "2026-09-30T10:04:17.058Z",
+      "data": {
+        "score": 100,
+        "rubricVersion": "quality-v1",
+        "failedChecks": []
+      }
+    }
+  ],
+  "reviews": [],
+  "badcases": []
+}
